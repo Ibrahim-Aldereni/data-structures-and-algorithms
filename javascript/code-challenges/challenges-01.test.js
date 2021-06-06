@@ -81,11 +81,17 @@ Return the modified array.
 ------------------------------------------------------------------------------------------------ */
 
 const addValues = (arr, value) => {
-  // Solution code here...
+  arr.push(value);
 };
 
 const addNumbers = (num, arr, times, callback) => {
-  // Solution code here...
+  let newArr = new Array(times);
+  newArr.fill(num);
+
+  newArr.forEach((item) => {
+    callback(arr, item);
+  });
+  return arr;
 };
 
 /* ------------------------------------------------------------------------------------------------
