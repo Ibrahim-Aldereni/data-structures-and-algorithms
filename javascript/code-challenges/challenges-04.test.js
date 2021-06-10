@@ -296,26 +296,7 @@ Sort the meetings in the order that they start. If two meetings start at the sam
 You DO NOT need to use your solution to Challenge 9 in completing Challenge 10.
 ------------------------------------------------------------------------------------------------ */
 
-const sortSchedule = (arr) => {
-  let arr2 = arr.sort((a, b) => {
-    if (a.start === b.start && a.dayOfWeek === b.dayOfWeek) {
-      if (a.end - a.start > b.end - b.start) {
-        return 1;
-      }
-      if (a.end - a.start < b.end - b.start) {
-        return -1;
-      }
-    }
-
-    if (a.start > b.start) {
-      return 1;
-    }
-    if (a.start < b.start) {
-      return -1;
-    }
-  });
-  return arr2;
-};
+const sortSchedule = (arr) => {};
 
 /* ------------------------------------------------------------------------------------------------
 TESTS
@@ -505,7 +486,7 @@ describe("Testing challenge 12", () => {
   });
 });
 
-describe("Testing challenge 13", () => {
+xdescribe("Testing challenge 13", () => {
   test("It should sort meetings by when they happen", () => {
     expect(sortSchedule(meetings)).toStrictEqual([
       new Meeting("Monday", "0900", "0945"),
