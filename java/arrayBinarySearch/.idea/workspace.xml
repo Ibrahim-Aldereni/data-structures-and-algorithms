@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="43808fdf-5d3d-4d51-aa99-f602c1075f0a" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/../../.editorconfig" beforeDir="false" afterPath="$PROJECT_DIR$/../../.editorconfig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../.eslintignore" beforeDir="false" afterPath="$PROJECT_DIR$/../../.eslintignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../.eslintrc.json" beforeDir="false" afterPath="$PROJECT_DIR$/../../.eslintrc.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../.github/workflows/javascript-tests.yml" beforeDir="false" afterPath="$PROJECT_DIR$/../../.github/workflows/javascript-tests.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../.github/workflows/python-tests.yml" beforeDir="false" afterPath="$PROJECT_DIR$/../../.github/workflows/python-tests.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/../../.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../.markdownlint.json" beforeDir="false" afterPath="$PROJECT_DIR$/../../.markdownlint.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../README.md" beforeDir="false" afterPath="$PROJECT_DIR$/../../README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../c-sharp/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/../../c-sharp/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../README.md" beforeDir="false" afterPath="$PROJECT_DIR$/../README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../arrayInsertShift/.idea/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/../arrayInsertShift/.idea/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../arrayInsertShift/.idea/arrayInsertShift.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../arrayInsertShift/.idea/arrayInsertShift.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../arrayInsertShift/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../arrayInsertShift/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../arrayInsertShift/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../arrayInsertShift/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../arrayInsertShift/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../arrayInsertShift/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../arrayInsertShift/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../arrayInsertShift/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../arrayInsertShift/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/../arrayInsertShift/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../arrayInsertShift/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/../arrayInsertShift/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../arrayReverse/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/../arrayReverse/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../img/array-insert-shift.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/../img/array-insert-shift.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../img/array-reverse.jpeg" beforeDir="false" afterPath="$PROJECT_DIR$/../img/array-reverse.jpeg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../javascript/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/../../javascript/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../javascript/code-challenges/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/../../javascript/code-challenges/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../javascript/code-challenges/bin/get-challenge.sh" beforeDir="false" afterPath="$PROJECT_DIR$/../../javascript/code-challenges/bin/get-challenge.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../javascript/code-challenges/challenges-01.test.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../javascript/code-challenges/challenges-01.test.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../javascript/code-challenges/challenges-02.test.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../javascript/code-challenges/challenges-02.test.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../javascript/code-challenges/challenges-03.test.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../javascript/code-challenges/challenges-03.test.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../javascript/code-challenges/challenges-04.test.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../javascript/code-challenges/challenges-04.test.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../javascript/code-challenges/challenges-05.test.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../javascript/code-challenges/challenges-05.test.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../javascript/code-challenges/challenges-06.test.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../javascript/code-challenges/challenges-06.test.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../javascript/code-challenges/challenges-07.test.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../javascript/code-challenges/challenges-07.test.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../javascript/code-challenges/challenges-08.test.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../javascript/code-challenges/challenges-08.test.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../javascript/code-challenges/challenges-09.test.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../javascript/code-challenges/challenges-09.test.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../javascript/code-challenges/challenges-10.test.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../javascript/code-challenges/challenges-10.test.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../javascript/code-challenges/challenges-11.test.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../javascript/code-challenges/challenges-11.test.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../javascript/code-challenges/challenges-13.test.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../javascript/code-challenges/challenges-13.test.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../javascript/code-challenges/proof-of-life.test.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../javascript/code-challenges/proof-of-life.test.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../javascript/code-challenges/reverse-ll/__tests__/reverse-ll.test.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../javascript/code-challenges/reverse-ll/__tests__/reverse-ll.test.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../javascript/code-challenges/reverse-ll/reverse-ll.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../javascript/code-challenges/reverse-ll/reverse-ll.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../javascript/linked-list/__tests__/linked-list.test.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../javascript/linked-list/__tests__/linked-list.test.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../javascript/linked-list/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../javascript/linked-list/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../javascript/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/../../javascript/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../javascript/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/../../javascript/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/../../package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../package.json" beforeDir="false" afterPath="$PROJECT_DIR$/../../package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../python/.editorconfig" beforeDir="false" afterPath="$PROJECT_DIR$/../../python/.editorconfig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../python/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/../../python/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../python/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/../../python/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../python/code_challenges/reverse_linked_list.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../python/code_challenges/reverse_linked_list.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../python/linked_list/linked_list.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../python/linked_list/linked_list.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../python/pyproject.toml" beforeDir="false" afterPath="$PROJECT_DIR$/../../python/pyproject.toml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../python/tests/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../python/tests/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../python/tests/test_linked_list.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../python/tests/test_linked_list.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../python/tests/test_reverse_linked_list.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../python/tests/test_reverse_linked_list.py" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="ProjectId" id="1vubU26bA0tvpYpdam2QIujVQTT" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectView">
+    <navigator currentView="ProjectPane" proportions="" version="1" splitterProportion="0.5">
+      <flattenPackages />
+      <showMembers />
+      <showModules />
+      <showLibraryContents />
+      <hideEmptyPackages />
+      <abbreviatePackageNames />
+      <autoscrollToSource />
+      <autoscrollFromSource />
+      <sortByType />
+    </navigator>
+    <panes>
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
+      <pane id="ProjectPane">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="untitled104" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="untitled104" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="untitled104" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="untitled104" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="untitled104" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="company" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
+    </panes>
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="RunManager">
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true">
+      <option name="MAIN_CLASS_NAME" value="Main" />
+      <module name="arrayBinarySearch" />
+      <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
+      <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper RunnerId="Run" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Main" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="43808fdf-5d3d-4d51-aa99-f602c1075f0a" name="Default Changelist" comment="" />
+      <created>1627414935810</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1627414935810</updated>
+    </task>
+    <servers />
+  </component>
+</project>
