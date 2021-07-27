@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="34c3c950-8ba1-4676-90c9-32003c819fa2" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../.editorconfig" beforeDir="false" afterPath="$PROJECT_DIR$/../../.editorconfig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../.eslintignore" beforeDir="false" afterPath="$PROJECT_DIR$/../../.eslintignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../.eslintrc.json" beforeDir="false" afterPath="$PROJECT_DIR$/../../.eslintrc.json" afterDir="false" />
@@ -13,7 +12,16 @@
       <change beforePath="$PROJECT_DIR$/../../README.md" beforeDir="false" afterPath="$PROJECT_DIR$/../../README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../c-sharp/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/../../c-sharp/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../README.md" beforeDir="false" afterPath="$PROJECT_DIR$/../README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/arrayInsertShift.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/arrayInsertShift.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../arrayReverse/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/../arrayReverse/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../img/array-insert-shift.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/../img/array-insert-shift.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../img/array-reverse.jpeg" beforeDir="false" afterPath="$PROJECT_DIR$/../img/array-reverse.jpeg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../javascript/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/../../javascript/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../javascript/code-challenges/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/../../javascript/code-challenges/README.md" afterDir="false" />
@@ -66,6 +74,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="last_opened_file_path" value="$USER_HOME$/Desktop/java-apps" />
     <property name="project.structure.last.edited" value="SDK Location" />
     <property name="project.structure.proportion" value="0.17" />
     <property name="project.structure.side.proportion" value="0.0" />
@@ -92,5 +101,6 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
 </project>
