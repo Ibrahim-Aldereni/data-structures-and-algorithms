@@ -6,26 +6,56 @@ package SinglyLinkedLists;
 public class App {
 
   public static void main(String[] args) {
-    LinkedList list1 = new LinkedList();
-    // insert
-    list1.insert(1);
-    list1.insert(2);
-    list1.insert(3);
-    list1.insert(50);
-    list1.insert(4);
-    list1.insert(100);
-    list1.insert(300);
-    // see the list
-    Node current = list1.head;
-    while (current != null) { // if i didn't reach the end of the list
-      System.out.println(current.data);
-      current = current.next;
-    }
+      ////////////////////////////////////// code challenge 05 ///////////////////////////////////////////////
+//    LinkedList list1 = new LinkedList();
+//    // insert
+//    list1.insert(1);
+//    list1.insert(2);
+//    list1.insert(3);
+//    list1.insert(50);
+//    list1.insert(4);
+//    list1.insert(100);
+//    list1.insert(300);
+//    // see the list
+//    Node current = list1.head;
+//    while (current != null) { // if i didn't reach the end of the list
+//      System.out.println(current.data);
+//      current = current.next;
+//    }
+//
+//    //includes
+//    System.out.println(list1.includes(300));
+//
+//    // to string
+//    System.out.println(list1.toStr());
 
-    //includes
-    System.out.println(list1.includes(300));
+    ////////////////////////////////////// code challenge 06 ///////////////////////////////////////////////
+    // append
+    LinkedList list2 = new LinkedList();
+    list2.append(5);
+    list2.append(3);
+    list2.append(4);
+    list2.append(10);
+    System.out.println("------------------append---------------------");
+    System.out.println(list2.toStr());
 
-    // to string
-    System.out.println(list1.toStr());
+    //insert before
+    list2.insertBefore(5,2); // insert before the head
+    list2.insertBefore(4,20); // insert before any number in the list
+    list2.insertBefore(10,23); // insert before the tail
+    list2.insertBefore(55,5); // insert before number that does not exist in the list (nothing will happen)
+    System.out.println("------------------insert before---------------------");
+    System.out.println(list2.toStr());
+    System.out.println("the head is -> "+list2.head.data); // check the head
+
+
+    //insert after
+    list2.insertAfter(2,100); // insert after head
+    list2.insertAfter(3,60); // insert after any number in the list
+    list2.insertAfter(10,77); // insert after the tail
+    list2.insertAfter(1,22); // insert after number that does not exist in the list (nothing will happen)
+    System.out.println("------------------insert after---------------------");
+    System.out.println(list2.toStr());
+    System.out.println("the tail is -> "+list2.tail.data); // check the tail
   }
 }
