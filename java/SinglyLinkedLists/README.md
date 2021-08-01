@@ -1,10 +1,10 @@
 # Singly Linked Lists
 
-Singly list data structure.
+Singly linked list data structure.
 
 ## Challenge
 
-Create Node class and linked list class, and create (insert, include, to strin) methods inside linked list class.
+Create Node class and linked list class, and create (insert, include, to string, append, insert before, insert after) methods inside linked list class.
 
 ## Approach & Efficiency
 
@@ -13,7 +13,10 @@ Create Node class and linked list class, and create (insert, include, to strin) 
 
 ## API
 
+### challenge 05:
+
 - insert
+
   Adds a new node with that value to the head of the list.
 
 - includes
@@ -24,5 +27,19 @@ Create Node class and linked list class, and create (insert, include, to strin) 
 
   Returns: a string representing all the values in the Linked List, formatted as:
   "{ a } -> {
+
+### challenge 06:
+
+- append
+
+  adds a new node with the given value to the end of the list
+
+- insert before
+
+  adds a new node with the given new value immediately before the first node that has the value specified
+
+- insert after
+
+  adds a new node with the given new value immediately after the first node that has the value specified
 
 [Back to table of contenets](../README.md)
