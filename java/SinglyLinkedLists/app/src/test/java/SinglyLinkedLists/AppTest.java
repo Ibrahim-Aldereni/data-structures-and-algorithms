@@ -4,11 +4,12 @@
 package SinglyLinkedLists;
 
 import org.junit.Test;
+
 import static org.junit.Assert.*;
 
 public class AppTest {
 
-    ////////////////////////////////// challenge 05 test /////////////////////////////////////////
+  ////////////////////////////////// challenge 05 test /////////////////////////////////////////
 //    @Test public void testLinkedList(){
 //      //Can successfully instantiate an empty linked list
 //      LinkedList list = new LinkedList();
@@ -56,63 +57,152 @@ public class AppTest {
 //    }
 
   ////////////////////////////////// challenge 06 test /////////////////////////////////////////
-  @Test public void testLinkedList2(){
-    //Can successfully add a node to the end of the linked list
-    LinkedList list2 = new LinkedList();
-    list2.append(5);
-    // output must be
-    String out = "{ 5 } -> NULL";
-    // test
-    assertEquals("add a node to the end of the linked list", out,list2.toStr());
+//  @Test public void testLinkedList2(){
+//    //Can successfully add a node to the end of the linked list
+//    LinkedList list2 = new LinkedList();
+//    list2.append(5);
+//    // output must be
+//    String out = "{ 5 } -> NULL";
+//    // test
+//    assertEquals("add a node to the end of the linked list", out,list2.toStr());
+//
+//    //-------------------------------------------------------------------------------------------------
+//    //Can successfully add multiple nodes to the end of a linked list
+//    list2.append(3);
+//    list2.append(4);
+//    list2.append(10);
+//    // output must be
+//    String out2 = "{ 5 } -> { 3 } -> { 4 } -> { 10 } -> NULL";
+//    // test
+//    assertEquals("add a node to the end of the linked list", out2,list2.toStr());
+//
+//    //-------------------------------------------------------------------------------------------------
+//    //Can successfully insert a node before a node located i the middle of a linked list
+//    LinkedList list3 = new LinkedList();
+//    list3.append(1);
+//    list3.append(2);
+//    list3.append(4);
+//    list3.insertBefore(4,3);
+//    // output must be
+//    String out3 = "{ 1 } -> { 2 } -> { 3 } -> { 4 } -> NULL";
+//    // test
+//    assertEquals("add a node to the end of the linked list", out3,list3.toStr());
+//
+//    //-------------------------------------------------------------------------------------------------
+//    //Can successfully insert a node before the first node of a linked list
+//    list3.insertBefore(1,0);
+//    // output must be
+//    String out4 = "{ 0 } -> { 1 } -> { 2 } -> { 3 } -> { 4 } -> NULL";
+//    // test
+//    assertEquals("add a node to the end of the linked list", out4,list3.toStr());
+//
+//    //-------------------------------------------------------------------------------------------------
+//    //Can successfully insert after a node in the middle of the linked list
+//    LinkedList list4 = new LinkedList();
+//    list4.append(10);
+//    list4.append(20);
+//    list4.append(40);
+//    list4.insertAfter(20,30);
+//    // output must be
+//    String out5 = "{ 10 } -> { 20 } -> { 30 } -> { 40 } -> NULL";
+//    // test
+//    assertEquals("add a node to the end of the linked list", out5,list4.toStr());
+//
+//    //-------------------------------------------------------------------------------------------------
+//    //Can successfully insert a node after the last node of the linked list
+//    list4.insertAfter(40,50);
+//    // output must be
+//    String out6 = "{ 10 } -> { 20 } -> { 30 } -> { 40 } -> { 50 } -> NULL";
+//    // test
+//    assertEquals("add a node to the end of the linked list", out6,list4.toStr());
+//  }
 
-    //-------------------------------------------------------------------------------------------------
-    //Can successfully add multiple nodes to the end of a linked list
-    list2.append(3);
-    list2.append(4);
-    list2.append(10);
-    // output must be
-    String out2 = "{ 5 } -> { 3 } -> { 4 } -> { 10 } -> NULL";
-    // test
-    assertEquals("add a node to the end of the linked list", out2,list2.toStr());
+  ////////////////////////////////// challenge 07 test /////////////////////////////////////////
+  //Where k is greater than the length of the linked list
+  @Test
+  public void testKthFromEndMethod() {
 
-    //-------------------------------------------------------------------------------------------------
-    //Can successfully insert a node before a node located i the middle of a linked list
+    String error = "";
+    try {
+      LinkedList list3 = new LinkedList();
+      list3.append(1);
+      list3.append(3);
+      list3.append(8);
+      list3.append(2);
+      list3.kthFromEnd(6);
+    } catch (Exception e) {
+      error = e.getMessage();
+    }
+    // output must be
+    String out = "number bigger than or equal list size or it's minus";
+    // test
+    assertEquals("error if k is greater than the length of the linked list", out, error);
+  }
+
+  //Where k and the length of the list are the same
+  @Test
+  public void testKthFromEndMethod2() {
+
+    String error = "";
+    try {
+      LinkedList list3 = new LinkedList();
+      list3.append(1);
+      list3.append(3);
+      list3.append(8);
+      list3.append(2);
+      list3.kthFromEnd(4);
+    } catch (Exception e) {
+      error = e.getMessage();
+    }
+    // output must be
+    String out = "number bigger than or equal list size or it's minus";
+    // test
+    assertEquals("error if k is greater than the length of the linked list", out, error);
+  }
+
+  //here k is not a positive integer
+  @Test
+  public void testKthFromEndMethod3() {
+
+    String error = "";
+    try {
+      LinkedList list3 = new LinkedList();
+      list3.append(1);
+      list3.append(3);
+      list3.append(8);
+      list3.append(2);
+      list3.kthFromEnd(-4);
+    } catch (Exception e) {
+      error = e.getMessage();
+    }
+    // output must be
+    String out = "number bigger than or equal list size or it's minus";
+    // test
+    assertEquals("error if k is greater than the length of the linked list", out, error);
+  }
+
+  //Where the linked list is of a size 1
+  @Test
+  public void testKthFromEndMethod4() throws Exception {
+    LinkedList list3 = new LinkedList();
+    list3.append(3);
+    // output must be
+    int out = 3;
+    // test
+    assertEquals("error if k is greater than the length of the linked list", out, list3.kthFromEnd(0));
+  }
+
+  //“Happy Path” where k is not at the end, but somewhere in the middle of the linked list
+  @Test
+  public void testKthFromEndMethod5() throws Exception {
     LinkedList list3 = new LinkedList();
     list3.append(1);
+    list3.append(3);
+    list3.append(8);
     list3.append(2);
-    list3.append(4);
-    list3.insertBefore(4,3);
     // output must be
-    String out3 = "{ 1 } -> { 2 } -> { 3 } -> { 4 } -> NULL";
+    int out = 8;
     // test
-    assertEquals("add a node to the end of the linked list", out3,list3.toStr());
-
-    //-------------------------------------------------------------------------------------------------
-    //Can successfully insert a node before the first node of a linked list
-    list3.insertBefore(1,0);
-    // output must be
-    String out4 = "{ 0 } -> { 1 } -> { 2 } -> { 3 } -> { 4 } -> NULL";
-    // test
-    assertEquals("add a node to the end of the linked list", out4,list3.toStr());
-
-    //-------------------------------------------------------------------------------------------------
-    //Can successfully insert after a node in the middle of the linked list
-    LinkedList list4 = new LinkedList();
-    list4.append(10);
-    list4.append(20);
-    list4.append(40);
-    list4.insertAfter(20,30);
-    // output must be
-    String out5 = "{ 10 } -> { 20 } -> { 30 } -> { 40 } -> NULL";
-    // test
-    assertEquals("add a node to the end of the linked list", out5,list4.toStr());
-
-    //-------------------------------------------------------------------------------------------------
-    //Can successfully insert a node after the last node of the linked list
-    list4.insertAfter(40,50);
-    // output must be
-    String out6 = "{ 10 } -> { 20 } -> { 30 } -> { 40 } -> { 50 } -> NULL";
-    // test
-    assertEquals("add a node to the end of the linked list", out6,list4.toStr());
+    assertEquals("error if k is greater than the length of the linked list", out, list3.kthFromEnd(1));
   }
 }

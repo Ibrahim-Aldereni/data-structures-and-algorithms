@@ -4,7 +4,7 @@ public class LinkedList {
   Node head;
   Node tail;
 
-  // code challenge 05 methods starts from here
+  ////////////////////////////////// code challenge 05 methods ////////////////////////////////
   // insert (add to end)
   void insert(int data) {
     Node newData = new Node(data); // create node with the number
@@ -49,7 +49,7 @@ public class LinkedList {
     return out;
   }
 
-  // code challenge 06 methods starts from here
+  ///////////////////////////////// code challenge 06 methods ////////////////////////////////////
   void append(int data) {
     Node newData = new Node(data); // create node with the number
     if (head == null) { // if the list is empty make this number the head and the tail
@@ -113,4 +113,34 @@ public class LinkedList {
       }
     }
   }
+
+  ///////////////////////////////// code challenge 07 methods ////////////////////////////////////
+  // this method is not required but i need it in the below method
+  int size() {
+    int size = 0;
+    Node current = head;
+    while(current != null){
+      size++;
+      current = current.next;
+    }
+    return size;
+  }
+
+  int kthFromEnd(int value) throws Exception {
+    if(value < 0 || value >= size()){
+      throw new Exception("number bigger than or equal list size or it's minus");
+    }
+    int elementIndex = size() - value;
+    Node current = null;
+
+    if(elementIndex > 0){
+      current = head;
+      for (int i = 1; i < elementIndex; i++) {
+        current = current.next;
+      }
+    }
+
+    return current.data;
+  }
 }
+

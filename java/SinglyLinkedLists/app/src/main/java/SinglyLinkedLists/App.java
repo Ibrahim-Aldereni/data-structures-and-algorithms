@@ -5,7 +5,7 @@ package SinglyLinkedLists;
 
 public class App {
 
-  public static void main(String[] args) {
+  public static void main(String[] args) throws Exception {
       ////////////////////////////////////// code challenge 05 ///////////////////////////////////////////////
 //    LinkedList list1 = new LinkedList();
 //    // insert
@@ -31,31 +31,44 @@ public class App {
 
     ////////////////////////////////////// code challenge 06 ///////////////////////////////////////////////
     // append
-    LinkedList list2 = new LinkedList();
-    list2.append(5);
-    list2.append(3);
-    list2.append(4);
-    list2.append(10);
-    System.out.println("------------------append---------------------");
-    System.out.println(list2.toStr());
+//    LinkedList list2 = new LinkedList();
+//    list2.append(5);
+//    list2.append(3);
+//    list2.append(4);
+//    list2.append(10);
+//    System.out.println("------------------append---------------------");
+//    System.out.println(list2.toStr());
+//
+//    //insert before
+//    list2.insertBefore(5,2); // insert before the head
+//    list2.insertBefore(4,20); // insert before any number in the list
+//    list2.insertBefore(10,23); // insert before the tail
+//    list2.insertBefore(55,5); // insert before number that does not exist in the list (nothing will happen)
+//    System.out.println("------------------insert before---------------------");
+//    System.out.println(list2.toStr());
+//    System.out.println("the head is -> "+list2.head.data); // check the head
+//
+//
+//    //insert after
+//    list2.insertAfter(2,100); // insert after head
+//    list2.insertAfter(3,60); // insert after any number in the list
+//    list2.insertAfter(10,77); // insert after the tail
+//    list2.insertAfter(1,22); // insert after number that does not exist in the list (nothing will happen)
+//    System.out.println("------------------insert after---------------------");
+//    System.out.println(list2.toStr());
+//    System.out.println("the tail is -> "+list2.tail.data); // check the tail
 
-    //insert before
-    list2.insertBefore(5,2); // insert before the head
-    list2.insertBefore(4,20); // insert before any number in the list
-    list2.insertBefore(10,23); // insert before the tail
-    list2.insertBefore(55,5); // insert before number that does not exist in the list (nothing will happen)
-    System.out.println("------------------insert before---------------------");
-    System.out.println(list2.toStr());
-    System.out.println("the head is -> "+list2.head.data); // check the head
+    ////////////////////////////////////// code challenge 07 ///////////////////////////////////////////////
+    try {
+      LinkedList list3 = new LinkedList();
+      list3.append(1);
+      list3.append(3);
+      list3.append(8);
+      list3.append(2);
+      System.out.println(list3.kthFromEnd(-1));
+    } catch (Exception e) {
+      e.printStackTrace();
+    }
 
-
-    //insert after
-    list2.insertAfter(2,100); // insert after head
-    list2.insertAfter(3,60); // insert after any number in the list
-    list2.insertAfter(10,77); // insert after the tail
-    list2.insertAfter(1,22); // insert after number that does not exist in the list (nothing will happen)
-    System.out.println("------------------insert after---------------------");
-    System.out.println(list2.toStr());
-    System.out.println("the tail is -> "+list2.tail.data); // check the tail
   }
 }
