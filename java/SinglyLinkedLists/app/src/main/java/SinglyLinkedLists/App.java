@@ -5,6 +5,30 @@ package SinglyLinkedLists;
 
 public class App {
 
+  ////////////////////////////////////// code challenge 08 method ///////////////////////////////////////////////
+ public static LinkedList zipLists(LinkedList ll1, LinkedList ll2) {
+    LinkedList out = new LinkedList();
+    Node current1 = ll1.head;
+    Node current2 = ll2.head;
+
+    while (current1 != null || current2 != null) {
+      if(current1 == null){
+        out.append(current2.data);
+        current2 = current2.next;
+      }else if(current2 == null){
+        out.append(current1.data);
+        current1 = current1.next;
+      }else{
+        out.append(current1.data);
+        out.append(current2.data);
+
+        current1 = current1.next;
+        current2 = current2.next;
+      }
+    }
+    return out;
+  }
+
   public static void main(String[] args) throws Exception {
     ////////////////////////////////////// code challenge 05 ///////////////////////////////////////////////
 //    LinkedList list1 = new LinkedList();
@@ -59,27 +83,27 @@ public class App {
 //    System.out.println("the tail is -> "+list2.tail.data); // check the tail
 
     ////////////////////////////////////// code challenge 07 ///////////////////////////////////////////////
-//    try {
-//      LinkedList list3 = new LinkedList();
-//      list3.append(1);
-//      list3.append(3);
-//      list3.append(8);
-//      list3.append(2);
-//      System.out.println(list3.kthFromEnd(-1));
-//    } catch (Exception e) {
-//      e.printStackTrace();
-//    }
+    try {
+      LinkedList list3 = new LinkedList();
+      list3.append(1);
+      list3.append(3);
+      list3.append(8);
+      list3.append(2);
+      System.out.println(list3.kthFromEnd(6));
+    } catch (Exception e) {
+      e.printStackTrace();
+    }
 
     ////////////////////////////////////// code challenge 08 ///////////////////////////////////////////////
-    LinkedList list4 = new LinkedList();
-    list4.append(1);
+//    LinkedList list4 = new LinkedList();
+//    list4.append(1);
 //    list4.append(3);
 //    list4.append(2);
-    LinkedList list5 = new LinkedList();
-    list5.append(5);
-    list5.append(9);
-    list5.append(4);
-
-    System.out.println(LinkedList.zipLists(list4,list5).toStr());
+//    LinkedList list5 = new LinkedList();
+//    list5.append(5);
+//    list5.append(9);
+//    list5.append(4);
+//
+//    System.out.println(zipLists(list4,list5).toStr());
   }
 }

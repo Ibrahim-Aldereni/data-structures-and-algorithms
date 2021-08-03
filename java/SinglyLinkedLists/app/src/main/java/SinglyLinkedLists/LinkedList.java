@@ -143,29 +143,5 @@ public class LinkedList {
 
     return current.data;
   }
-
-  ///////////////////////////////// code challenge 08 methods ////////////////////////////////////
-  static LinkedList zipLists(LinkedList ll1, LinkedList ll2) {
-    LinkedList out = new LinkedList();
-    Node current1 = ll1.head;
-    Node current2 = ll2.head;
-
-    while (current1 != null || current2 != null) {
-      if(current1 == null){
-        out.append(current2.data);
-        current2 = current2.next;
-      }else if(current2 == null){
-        out.append(current1.data);
-        current1 = current1.next;
-      }else{
-        out.append(current1.data);
-        out.append(current2.data);
-
-        current1 = current1.next;
-        current2 = current2.next;
-      }
-    }
-    return out;
-  }
 }
 

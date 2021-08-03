@@ -220,7 +220,7 @@ public class AppTest {
     // output must be
     String out = "{ 1 } -> { 5 } -> { 3 } -> { 9 } -> { 2 } -> { 4 } -> NULL";
 
-    assertEquals("test when 2 lists same size",out,LinkedList.zipLists(list1,list2).toStr());
+    assertEquals("test when 2 lists same size",out,App.zipLists(list1,list2).toStr());
   }
 
   // 2 two lists different sizes
@@ -235,7 +235,7 @@ public class AppTest {
     // output must be
     String out = "{ 1 } -> { 5 } -> { 9 } -> { 4 } -> NULL";
 
-    assertEquals("test when 2 lists different sizes",out,LinkedList.zipLists(list1,list2).toStr());
+    assertEquals("test when 2 lists different sizes",out,App.zipLists(list1,list2).toStr());
   }
 
   // 3 one list is empty
@@ -249,6 +249,6 @@ public class AppTest {
     // output must be
     String out = "{ 5 } -> { 9 } -> { 4 } -> NULL";
 
-    assertEquals("test when one list is empty",out,LinkedList.zipLists(list1,list2).toStr());
+    assertEquals("test when one list is empty",out,App.zipLists(list1,list2).toStr());
   }
 }
