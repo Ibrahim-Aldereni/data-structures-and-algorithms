@@ -119,90 +119,136 @@ public class AppTest {
 
   ////////////////////////////////// challenge 07 test /////////////////////////////////////////
   //Where k is greater than the length of the linked list
-  @Test
-  public void testKthFromEndMethod() {
+//  @Test
+//  public void testKthFromEndMethod() {
+//
+//    String error = "";
+//    try {
+//      LinkedList list3 = new LinkedList();
+//      list3.append(1);
+//      list3.append(3);
+//      list3.append(8);
+//      list3.append(2);
+//      list3.kthFromEnd(6);
+//    } catch (Exception e) {
+//      error = e.getMessage();
+//    }
+//    // output must be
+//    String out = "number bigger than or equal list size or it's minus";
+//    // test
+//    assertEquals("error if k is greater than the length of the linked list", out, error);
+//  }
+//
+//  //Where k and the length of the list are the same
+//  @Test
+//  public void testKthFromEndMethod2() {
+//
+//    String error = "";
+//    try {
+//      LinkedList list3 = new LinkedList();
+//      list3.append(1);
+//      list3.append(3);
+//      list3.append(8);
+//      list3.append(2);
+//      list3.kthFromEnd(4);
+//    } catch (Exception e) {
+//      error = e.getMessage();
+//    }
+//    // output must be
+//    String out = "number bigger than or equal list size or it's minus";
+//    // test
+//    assertEquals("error if k is greater than the length of the linked list", out, error);
+//  }
+//
+//  //here k is not a positive integer
+//  @Test
+//  public void testKthFromEndMethod3() {
+//
+//    String error = "";
+//    try {
+//      LinkedList list3 = new LinkedList();
+//      list3.append(1);
+//      list3.append(3);
+//      list3.append(8);
+//      list3.append(2);
+//      list3.kthFromEnd(-4);
+//    } catch (Exception e) {
+//      error = e.getMessage();
+//    }
+//    // output must be
+//    String out = "number bigger than or equal list size or it's minus";
+//    // test
+//    assertEquals("error if k is greater than the length of the linked list", out, error);
+//  }
+//
+//  //Where the linked list is of a size 1
+//  @Test
+//  public void testKthFromEndMethod4() throws Exception {
+//    LinkedList list3 = new LinkedList();
+//    list3.append(3);
+//    // output must be
+//    int out = 3;
+//    // test
+//    assertEquals("error if k is greater than the length of the linked list", out, list3.kthFromEnd(0));
+//  }
+//
+//  //“Happy Path” where k is not at the end, but somewhere in the middle of the linked list
+//  @Test
+//  public void testKthFromEndMethod5() throws Exception {
+//    LinkedList list3 = new LinkedList();
+//    list3.append(1);
+//    list3.append(3);
+//    list3.append(8);
+//    list3.append(2);
+//    // output must be
+//    int out = 8;
+//    // test
+//    assertEquals("error if k is greater than the length of the linked list", out, list3.kthFromEnd(1));
+//  }
+  ////////////////////////////////// challenge 08 test /////////////////////////////////////////
+  // 1 two lists same size
+  @Test public void testZipLists1(){
+    LinkedList list1 = new LinkedList();
+    list1.append(1);
+    list1.append(3);
+    list1.append(2);
+    LinkedList list2 = new LinkedList();
+    list2.append(5);
+    list2.append(9);
+    list2.append(4);
 
-    String error = "";
-    try {
-      LinkedList list3 = new LinkedList();
-      list3.append(1);
-      list3.append(3);
-      list3.append(8);
-      list3.append(2);
-      list3.kthFromEnd(6);
-    } catch (Exception e) {
-      error = e.getMessage();
-    }
     // output must be
-    String out = "number bigger than or equal list size or it's minus";
-    // test
-    assertEquals("error if k is greater than the length of the linked list", out, error);
+    String out = "{ 1 } -> { 5 } -> { 3 } -> { 9 } -> { 2 } -> { 4 } -> NULL";
+
+    assertEquals("test when 2 lists same size",out,LinkedList.zipLists(list1,list2).toStr());
   }
 
-  //Where k and the length of the list are the same
-  @Test
-  public void testKthFromEndMethod2() {
+  // 2 two lists different sizes
+  @Test public void testZipLists2(){
+    LinkedList list1 = new LinkedList();
+    list1.append(1);
+    LinkedList list2 = new LinkedList();
+    list2.append(5);
+    list2.append(9);
+    list2.append(4);
 
-    String error = "";
-    try {
-      LinkedList list3 = new LinkedList();
-      list3.append(1);
-      list3.append(3);
-      list3.append(8);
-      list3.append(2);
-      list3.kthFromEnd(4);
-    } catch (Exception e) {
-      error = e.getMessage();
-    }
     // output must be
-    String out = "number bigger than or equal list size or it's minus";
-    // test
-    assertEquals("error if k is greater than the length of the linked list", out, error);
+    String out = "{ 1 } -> { 5 } -> { 9 } -> { 4 } -> NULL";
+
+    assertEquals("test when 2 lists different sizes",out,LinkedList.zipLists(list1,list2).toStr());
   }
 
-  //here k is not a positive integer
-  @Test
-  public void testKthFromEndMethod3() {
+  // 3 one list is empty
+  @Test public void testZipLists3(){
+    LinkedList list1 = new LinkedList();
+    LinkedList list2 = new LinkedList();
+    list2.append(5);
+    list2.append(9);
+    list2.append(4);
 
-    String error = "";
-    try {
-      LinkedList list3 = new LinkedList();
-      list3.append(1);
-      list3.append(3);
-      list3.append(8);
-      list3.append(2);
-      list3.kthFromEnd(-4);
-    } catch (Exception e) {
-      error = e.getMessage();
-    }
     // output must be
-    String out = "number bigger than or equal list size or it's minus";
-    // test
-    assertEquals("error if k is greater than the length of the linked list", out, error);
-  }
+    String out = "{ 5 } -> { 9 } -> { 4 } -> NULL";
 
-  //Where the linked list is of a size 1
-  @Test
-  public void testKthFromEndMethod4() throws Exception {
-    LinkedList list3 = new LinkedList();
-    list3.append(3);
-    // output must be
-    int out = 3;
-    // test
-    assertEquals("error if k is greater than the length of the linked list", out, list3.kthFromEnd(0));
-  }
-
-  //“Happy Path” where k is not at the end, but somewhere in the middle of the linked list
-  @Test
-  public void testKthFromEndMethod5() throws Exception {
-    LinkedList list3 = new LinkedList();
-    list3.append(1);
-    list3.append(3);
-    list3.append(8);
-    list3.append(2);
-    // output must be
-    int out = 8;
-    // test
-    assertEquals("error if k is greater than the length of the linked list", out, list3.kthFromEnd(1));
+    assertEquals("test when one list is empty",out,LinkedList.zipLists(list1,list2).toStr());
   }
 }

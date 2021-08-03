@@ -4,7 +4,7 @@ Singly linked list data structure.
 
 ## Challenge
 
-Create Node class and linked list class, and create (insert, include, to string, append, insert before, insert after, kthFromEnd) methods inside linked list class.
+Create Node class and linked list class, and create (insert, include, to string, append, insert before, insert after, kthFromEnd, zipLists) methods inside linked list class.
 
 ## Approach & Efficiency
 
@@ -21,6 +21,11 @@ Create Node class and linked list class, and create (insert, include, to string,
   - Space: O(1)
 
 ### challenge 07:
+
+- Time: O(n)
+- Space: O(1)
+
+### challenge 08:
 
 - Time: O(n)
 - Space: O(1)
@@ -62,6 +67,12 @@ Create Node class and linked list class, and create (insert, include, to string,
 
   Return the node’s value that is k places from the tail of the linked list.
 
+  ### challenge 08:
+
+- zipLists
+
+  Zip the two linked lists together into one so that the nodes alternate between the two lists and return a reference to the head of the zipped list.
+
 ## Whiteboard Process
 
 ### Challenge 06
@@ -71,5 +82,9 @@ Create Node class and linked list class, and create (insert, include, to string,
 ### Challenge 07
 
 ![challenge06](../img/linked-list-kth.png)
+
+### Challenge 08
+
+![challenge06](../img/linked-list-zip.png)
 
 [Back to table of contenets](../README.md)

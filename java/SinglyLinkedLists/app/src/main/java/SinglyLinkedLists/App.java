@@ -6,7 +6,7 @@ package SinglyLinkedLists;
 public class App {
 
   public static void main(String[] args) throws Exception {
-      ////////////////////////////////////// code challenge 05 ///////////////////////////////////////////////
+    ////////////////////////////////////// code challenge 05 ///////////////////////////////////////////////
 //    LinkedList list1 = new LinkedList();
 //    // insert
 //    list1.insert(1);
@@ -59,16 +59,27 @@ public class App {
 //    System.out.println("the tail is -> "+list2.tail.data); // check the tail
 
     ////////////////////////////////////// code challenge 07 ///////////////////////////////////////////////
-    try {
-      LinkedList list3 = new LinkedList();
-      list3.append(1);
-      list3.append(3);
-      list3.append(8);
-      list3.append(2);
-      System.out.println(list3.kthFromEnd(-1));
-    } catch (Exception e) {
-      e.printStackTrace();
-    }
+//    try {
+//      LinkedList list3 = new LinkedList();
+//      list3.append(1);
+//      list3.append(3);
+//      list3.append(8);
+//      list3.append(2);
+//      System.out.println(list3.kthFromEnd(-1));
+//    } catch (Exception e) {
+//      e.printStackTrace();
+//    }
 
+    ////////////////////////////////////// code challenge 08 ///////////////////////////////////////////////
+    LinkedList list4 = new LinkedList();
+    list4.append(1);
+//    list4.append(3);
+//    list4.append(2);
+    LinkedList list5 = new LinkedList();
+    list5.append(5);
+    list5.append(9);
+    list5.append(4);
+
+    System.out.println(LinkedList.zipLists(list4,list5).toStr());
   }
 }

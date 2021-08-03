@@ -5,8 +5,21 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8b149569-e3b8-460f-9286-f1f2de29ebe7" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.gradle/7.0.1/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.0.1/executionHistory/executionHistory.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/7.0.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.0.1/executionHistory/executionHistory.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/7.0.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.0.1/fileHashes/fileHashes.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/7.0.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.0.1/fileHashes/fileHashes.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/7.0.1/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.0.1/fileHashes/resourceHashesCache.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/7.0.1/javaCompile/classAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.0.1/javaCompile/classAnalysis.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/7.0.1/javaCompile/jarAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.0.1/javaCompile/jarAnalysis.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/7.0.1/javaCompile/javaCompile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.0.1/javaCompile/javaCompile.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/7.0.1/javaCompile/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.0.1/javaCompile/taskHistory.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/classes/java/main/SinglyLinkedLists/App.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/classes/java/main/SinglyLinkedLists/App.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/classes/java/main/SinglyLinkedLists/LinkedList.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/classes/java/main/SinglyLinkedLists/LinkedList.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/classes/java/test/SinglyLinkedLists/AppTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/classes/java/test/SinglyLinkedLists/AppTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/tmp/compileJava/source-classes-mapping.txt" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/tmp/compileJava/source-classes-mapping.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/SinglyLinkedLists/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/SinglyLinkedLists/App.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/SinglyLinkedLists/LinkedList.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/SinglyLinkedLists/LinkedList.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/test/java/SinglyLinkedLists/AppTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/test/java/SinglyLinkedLists/AppTest.java" afterDir="false" />
@@ -51,26 +64,18 @@
     <property name="settings.editor.selected.configurable" value="reference.settingsdialog.project.gradle" />
   </component>
   <component name="RunManager" selected="JUnit.AppTest">
-    <configuration name="AppTest.testLinkedList" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="--tests &quot;SinglyLinkedLists.AppTest.testLinkedList&quot;" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value=":app:test" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <method v="2" />
+    <configuration name="App" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="SinglyLinkedLists.App" />
+      <module name="SinglyLinkedLists.app.main" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="SinglyLinkedLists.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
     </configuration>
     <configuration name="AppTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="SinglyLinkedLists.app.test" />
@@ -138,10 +143,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="JUnit.AppTest" />
+        <item itemvalue="Application.App" />
         <item itemvalue="JUnit.AppTest.testKthFromEndMethod" />
         <item itemvalue="JUnit.AppTest.testLinkedList2" />
         <item itemvalue="JUnit.AppTest.testLinkedList" />
-        <item itemvalue="Gradle.AppTest.testLinkedList" />
       </list>
     </recent_temporary>
   </component>
