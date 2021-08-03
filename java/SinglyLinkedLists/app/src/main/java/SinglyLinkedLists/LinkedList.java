@@ -119,7 +119,7 @@ public class LinkedList {
   int size() {
     int size = 0;
     Node current = head;
-    while(current != null){
+    while (current != null) {
       size++;
       current = current.next;
     }
@@ -127,13 +127,14 @@ public class LinkedList {
   }
 
   int kthFromEnd(int value) throws Exception {
-    if(value < 0 || value >= size()){
+    int size = size();
+    if (value < 0 || value >= size) {
       throw new Exception("number bigger than or equal list size or it's minus");
     }
-    int elementIndex = size() - value;
+    int elementIndex = size - value;
     Node current = null;
 
-    if(elementIndex > 0){
+    if (elementIndex > 0) {
       current = head;
       for (int i = 1; i < elementIndex; i++) {
         current = current.next;
@@ -141,6 +142,30 @@ public class LinkedList {
     }
 
     return current.data;
+  }
+
+  ///////////////////////////////// code challenge 08 methods ////////////////////////////////////
+  static LinkedList zipLists(LinkedList ll1, LinkedList ll2) {
+    LinkedList out = new LinkedList();
+    Node current1 = ll1.head;
+    Node current2 = ll2.head;
+
+    while (current1 != null || current2 != null) {
+      if(current1 == null){
+        out.append(current2.data);
+        current2 = current2.next;
+      }else if(current2 == null){
+        out.append(current1.data);
+        current1 = current1.next;
+      }else{
+        out.append(current1.data);
+        out.append(current2.data);
+
+        current1 = current1.next;
+        current2 = current2.next;
+      }
+    }
+    return out;
   }
 }
 

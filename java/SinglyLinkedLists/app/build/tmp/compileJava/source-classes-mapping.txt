@@ -1,6 +1,6 @@
 SinglyLinkedLists/Node.java
  SinglyLinkedLists.Node
-SinglyLinkedLists/App.java
- SinglyLinkedLists.App
 SinglyLinkedLists/LinkedList.java
  SinglyLinkedLists.LinkedList
+SinglyLinkedLists/App.java
+ SinglyLinkedLists.App
