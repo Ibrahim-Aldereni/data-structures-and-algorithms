@@ -143,5 +143,6 @@ public class LinkedList {
 
     return current.data;
   }
+  // code challenge 08 and 09 methods in the app class
 }
 
