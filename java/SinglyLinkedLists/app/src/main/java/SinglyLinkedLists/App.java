@@ -45,6 +45,32 @@ public class App {
     return list;
   }
 
+  public static boolean listPalindromeCheck(LinkedList list) {
+    LinkedList list1 = new LinkedList();
+
+    // save input list on other list to compare it
+    Node current1 = list.head;
+    while (current1 != null) {
+      list1.append(current1.data);
+      current1 = current1.next;
+    }
+
+    // reverse input list
+    Node prev = null;
+    Node current = list.head;
+    Node next = null;
+
+    while (current != null) {
+      next = current.next;
+      current.next = prev;
+      prev = current;
+      current = next;
+    }
+    list.head = prev;
+
+    return list1.toStr().equals(list.toStr());
+  }
+
   public static void main(String[] args) throws Exception {
     ////////////////////////////////////// code challenge 05 ///////////////////////////////////////////////
 //    LinkedList list1 = new LinkedList();
@@ -127,9 +153,10 @@ public class App {
     LinkedList list4 = new LinkedList();
     list4.append(1);
     list4.append(2);
-    list4.append(3);
+    list4.append(1);
 
     System.out.println(reversedList(list4).toStr());
-
+    System.out.println(listPalindromeCheck(list4)); // if the reversed list and the original list are the same the
+    // output is true
   }
 }
