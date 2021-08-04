@@ -6,19 +6,19 @@ package SinglyLinkedLists;
 public class App {
 
   ////////////////////////////////////// code challenge 08 method ///////////////////////////////////////////////
- public static LinkedList zipLists(LinkedList ll1, LinkedList ll2) {
+  public static LinkedList zipLists(LinkedList ll1, LinkedList ll2) {
     LinkedList out = new LinkedList();
     Node current1 = ll1.head;
     Node current2 = ll2.head;
 
     while (current1 != null || current2 != null) {
-      if(current1 == null){
+      if (current1 == null) {
         out.append(current2.data);
         current2 = current2.next;
-      }else if(current2 == null){
+      } else if (current2 == null) {
         out.append(current1.data);
         current1 = current1.next;
-      }else{
+      } else {
         out.append(current1.data);
         out.append(current2.data);
 
@@ -27,6 +27,22 @@ public class App {
       }
     }
     return out;
+  }
+
+  ////////////////////////////////////// code challenge 09 ///////////////////////////////////////////////
+  public static LinkedList reversedList(LinkedList list) {
+    Node prev = null;
+    Node current = list.head;
+    Node next = null;
+
+    while (current != null) {
+      next = current.next;
+      current.next = prev;
+      prev = current;
+      current = next;
+    }
+    list.head = prev;
+    return list;
   }
 
   public static void main(String[] args) throws Exception {
@@ -83,16 +99,16 @@ public class App {
 //    System.out.println("the tail is -> "+list2.tail.data); // check the tail
 
     ////////////////////////////////////// code challenge 07 ///////////////////////////////////////////////
-    try {
-      LinkedList list3 = new LinkedList();
-      list3.append(1);
-      list3.append(3);
-      list3.append(8);
-      list3.append(2);
-      System.out.println(list3.kthFromEnd(6));
-    } catch (Exception e) {
-      e.printStackTrace();
-    }
+//    try {
+//      LinkedList list3 = new LinkedList();
+//      list3.append(1);
+//      list3.append(3);
+//      list3.append(8);
+//      list3.append(2);
+//      System.out.println(list3.kthFromEnd(6));
+//    } catch (Exception e) {
+//      e.printStackTrace();
+//    }
 
     ////////////////////////////////////// code challenge 08 ///////////////////////////////////////////////
 //    LinkedList list4 = new LinkedList();
@@ -105,5 +121,15 @@ public class App {
 //    list5.append(4);
 //
 //    System.out.println(zipLists(list4,list5).toStr());
+
+    ////////////////////////////////////// code challenge 09 ///////////////////////////////////////////////
+
+    LinkedList list4 = new LinkedList();
+    list4.append(1);
+    list4.append(2);
+    list4.append(3);
+
+    System.out.println(reversedList(list4).toStr());
+
   }
 }
