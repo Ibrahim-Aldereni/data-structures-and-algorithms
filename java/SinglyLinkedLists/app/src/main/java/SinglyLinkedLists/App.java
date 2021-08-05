@@ -82,13 +82,13 @@ public class App {
 //    list1.insert(4);
 //    list1.insert(100);
 //    list1.insert(300);
-//    // see the list
+    // see the list
 //    Node current = list1.head;
 //    while (current != null) { // if i didn't reach the end of the list
 //      System.out.println(current.data);
 //      current = current.next;
 //    }
-//
+
 //    //includes
 //    System.out.println(list1.includes(300));
 //
@@ -150,13 +150,13 @@ public class App {
 
     ////////////////////////////////////// code challenge 09 ///////////////////////////////////////////////
 
-    LinkedList list4 = new LinkedList();
-    list4.append(1);
-    list4.append(2);
-    list4.append(1);
-
-    System.out.println(reversedList(list4).toStr());
-    System.out.println(listPalindromeCheck(list4)); // if the reversed list and the original list are the same the
-    // output is true
+//    LinkedList list4 = new LinkedList();
+//    list4.append(1);
+//    list4.append(2);
+//    list4.append(1);
+//
+//    System.out.println(reversedList(list4).toStr());
+//    System.out.println(listPalindromeCheck(list4)); // if the reversed list and the original list are the same the
+//    // output is true
   }
 }

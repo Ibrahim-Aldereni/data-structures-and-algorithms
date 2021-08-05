@@ -5,15 +5,15 @@ public class LinkedList {
   Node tail;
 
   ////////////////////////////////// code challenge 05 methods ////////////////////////////////
-  // insert (add to end)
+  // insert (add to first)
   void insert(int data) {
     Node newData = new Node(data); // create node with the number
     if (head == null) { // if the list is empty make this number the head and the tail
       head = newData;
       tail = head;
     } else {
-      tail.next = newData;
-      tail = newData;
+      newData.next = head;
+      head = newData;
     }
   }
 
