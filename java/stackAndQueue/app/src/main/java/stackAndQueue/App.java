@@ -4,7 +4,7 @@
 package stackAndQueue;
 
 public class App {
-  public static void main(String[] args) {
+  public static void main(String[] args) throws Exception {
     //////////////////////////////////// challenge 10 ///////////////////////////////////
     ////////////////Stack/////////////////
     //push
@@ -55,5 +55,20 @@ public class App {
 //    }
     //is empty
 //    System.out.println(q1.isEmpty());
+
+    //////////////////////////////////// challenge 11 ///////////////////////////////////
+    //enqueue
+    PseudoQueue<Integer> pq1 = new PseudoQueue<>();
+    pq1.enqueue(20);
+    pq1.enqueue(15);
+    pq1.enqueue(10);
+    pq1.enqueue(5);
+
+    System.out.println(pq1.toString());
+    //dequeue
+    pq1.dequeue();
+    System.out.println(pq1.toString());
+    pq1.dequeue();
+    System.out.println(pq1.toString());
   }
 }
