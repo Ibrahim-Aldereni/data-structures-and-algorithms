@@ -29,10 +29,17 @@
 
 - challenge 10 >> By Using a Linked List as the underlying data storage mechanism, implement both a Stack and a Queue data structure.
 
+- challenge 11 >> Implement a Queue using two Stacks.
+
 ## Approach & Efficiency
 
 - challenge 10:
+
   - Time: O(1)
+  - Space: O(1)
+
+- challenge 11:
+  - Time: O(n)
   - Space: O(1)
 
 ## API
@@ -45,5 +52,10 @@
 - Queue > **dequeue** > Removes the node from the front of the queue and returns the value from node from the front of the queue.
 - Stack and Queue > **peek** > Returns Value of the node located at the front(queue) and top(stack).
 - Stack and Queue > **is empty** >Returns Boolean indicating whether or not the queue or stack is empty
+
+### challege 11:
+
+- **enqueue** > Inserts value into the PseudoQueue, using a first-in, first-out approach.
+- **dequeue** > Extracts a value from the PseudoQueue, using a first-in, first-out approach
 
 [Back to table of contenets](../README.md)

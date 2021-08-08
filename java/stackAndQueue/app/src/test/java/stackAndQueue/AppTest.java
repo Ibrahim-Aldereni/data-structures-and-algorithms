@@ -9,160 +9,196 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class AppTest {
   //////////////////////////////////// challenge 10 ///////////////////////////////////
-//  Can successfully push onto a stack
-  @Test
-  public void testStackPush() {
-    Stack<Integer> st1 = new Stack<>();
-    st1.push(10);
+////  Can successfully push onto a stack
+//  @Test
+//  public void testStackPush() {
+//    Stack<Integer> st1 = new Stack<>();
+//    st1.push(10);
+//
+//    assertEquals(10, st1.top.value, "test stack push one value");
+//  }
+//
+//  //  Can successfully push multiple values onto a stack
+//  @Test
+//  public void testStackPush2() {
+//    Stack<String> st1 = new Stack<>();
+//    st1.push("a");
+//    st1.push("b");
+//    st1.push("c");
+//
+//    assertEquals("c", st1.top.value, "test stack push multiple values");
+//    assertEquals("b", st1.top.next.value, "test stack top next value");
+//  }
+//
+//  //  Can successfully pop off the stack
+//  @Test
+//  public void testStackPop() throws Exception {
+//    Stack<String> st1 = new Stack<>();
+//    st1.push("a");
+//    st1.push("b");
+//    st1.push("c");
+//
+//    assertEquals("c", st1.pop(), "test stack pop");
+//    assertEquals("b", st1.top.value, "test stack top value");
+//  }
+//
+//  //  Can successfully empty a stack after multiple pops
+//  @Test
+//  public void testStackPop2() {
+//    Stack<String> st1 = new Stack<>();
+//    try {
+//      st1.push("a");
+//      st1.push("b");
+//      st1.push("c");
+//      st1.pop();
+//      st1.pop();
+//      st1.pop();
+//    } catch (Exception e) {
+//      System.out.println(e.getMessage());
+//    }
+//    assertNull(st1.top, "test stack multiple pop");
+//  }
+//
+//  //  Can successfully peek the next item on the stack
+//  @Test
+//  public void testStackPeek() throws Exception {
+//    Stack<String> st1 = new Stack<>();
+//    st1.push("a");
+//    st1.push("b");
+//    st1.push("c");
+//    st1.pop();
+//
+//    assertEquals("b", st1.peek(), "test stack peek");
+//  }
+//
+//  //  Can successfully instantiate an empty stack
+//  @Test
+//  public void testStackEmpty() throws Exception {
+//    Stack<String> st1 = new Stack<>();
+//
+//    assertNull(st1.top, "test instantiate an empty stack");
+//  }
+//
+//  //  Calling pop or peek on empty stack raises exception
+//  @Test
+//  public void testStackError() {
+//    Stack<String> st1 = new Stack<>();
+//    try {
+//      assertEquals("stack is empty", st1.peek(), "test peek on empty stack");
+//      assertEquals("stack is empty", st1.pop(), "test pop on empty stack");
+//    } catch (Exception e) {
+//      e.printStackTrace();
+//    }
+//  }
+//
+//  //  Can successfully enqueue into a queue
+//  @Test
+//  public void testQueueEnqueue() {
+//    Queue<Integer> q1 = new Queue<>();
+//    q1.enqueue(5);
+//
+//    assertEquals(5, q1.front.value, "test enqueue one element into a queue");
+//    assertEquals(5, q1.rear.value, "test enqueue one element into a queue");
+//  }
+//
+//  //  Can successfully enqueue multiple values into a queue
+//  @Test
+//  public void testQueueEnqueue2() {
+//    Queue<Integer> q1 = new Queue<>();
+//    q1.enqueue(5);
+//    q1.enqueue(10);
+//    q1.enqueue(3);
+//
+//    assertEquals(5, q1.front.value, "test enqueue multiple element into a queue");
+//    assertEquals(3, q1.rear.value, "test enqueue multiple element into a queue");
+//  }
+//
+//  //  Can successfully dequeue out of a queue the expected value
+//  @Test
+//  public void testQueueDequeue() throws Exception {
+//    Queue<Integer> q1 = new Queue<>();
+//    q1.enqueue(5);
+//    q1.enqueue(10);
+//    q1.enqueue(3);
+//
+//    assertEquals(5, q1.dequeue(), "test dequeue");
+//    assertEquals(10, q1.front.value, "test front value after dequeue");
+//  }
+//
+//  //  Can successfully peek into a queue, seeing the expected value
+//  @Test
+//  public void testQueuePeek() throws Exception {
+//    Queue<Integer> q1 = new Queue<>();
+//    q1.enqueue(5);
+//    q1.enqueue(10);
+//    q1.enqueue(3);
+//    q1.dequeue();
+//
+//    assertEquals(10, q1.peek(), "test queue peek");
+//  }
+//
+//  //  Can successfully empty a queue after multiple dequeues
+//  @Test
+//  public void testQueueDequeue2() throws Exception {
+//    Queue<Integer> q1 = new Queue<>();
+//    q1.enqueue(5);
+//    q1.enqueue(10);
+//    q1.enqueue(3);
+//    q1.dequeue();
+//    q1.dequeue();
+//    q1.dequeue();
+//
+//    assertNull(q1.front, "test empty a queue after multiple dequeues");
+//  }
+//
+//  //  Can successfully instantiate an empty queue
+//  @Test
+//  public void testQueueCreate() {
+//    Queue<Integer> q1 = new Queue<>();
+//
+//    assertNull(q1.front, "test instantiate an empty queue");
+//    assertNull(q1.rear, "test instantiate an empty queue");
+//  }
+//
+//  //  Calling dequeue or peek on empty queue raises exception
+//  @Test
+//  public void testQueueError() {
+//    Queue<Integer> q1 = new Queue<>();
+//    try {
+//      assertEquals("queue is empty", q1.peek(), "test peek on empty queue");
+//      assertEquals("queue is empty", q1.dequeue(), "test dequeue on empty queue");
+//    } catch (Exception e) {
+//      e.printStackTrace();
+//    }
+//  }
 
-    assertEquals(10, st1.top.value, "test stack push one value");
+  //////////////////////////////////// challenge 11 ///////////////////////////////////
+  //enqueue
+  @Test public void testPseudoQueue(){
+    PseudoQueue<Integer> pq1 = new PseudoQueue<>();
+    pq1.enqueue(20);
+    pq1.enqueue(15);
+    pq1.enqueue(10);
+    pq1.enqueue(5);
+
+    // output should be :
+    String out = "[5]->[10]->[15]->[20]->NULL";
+
+    assertEquals(out,pq1.toString());
   }
 
-  //  Can successfully push multiple values onto a stack
-  @Test
-  public void testStackPush2() {
-    Stack<String> st1 = new Stack<>();
-    st1.push("a");
-    st1.push("b");
-    st1.push("c");
+  //dequeue
+  @Test public void testPseudoQueue2() throws Exception {
+    PseudoQueue<Integer> pq1 = new PseudoQueue<>();
+    pq1.enqueue(20);
+    pq1.enqueue(15);
+    pq1.enqueue(10);
+    pq1.enqueue(5);
+    pq1.dequeue();
+    // output should be :
+    String out = "[5]->[10]->[15]->NULL";
 
-    assertEquals("c", st1.top.value, "test stack push multiple values");
-    assertEquals("b", st1.top.next.value, "test stack top next value");
+    assertEquals(out,pq1.toString());
   }
 
-  //  Can successfully pop off the stack
-  @Test
-  public void testStackPop() throws Exception {
-    Stack<String> st1 = new Stack<>();
-    st1.push("a");
-    st1.push("b");
-    st1.push("c");
-
-    assertEquals("c", st1.pop(), "test stack pop");
-    assertEquals("b", st1.top.value, "test stack top value");
-  }
-
-  //  Can successfully empty a stack after multiple pops
-  @Test
-  public void testStackPop2() {
-    Stack<String> st1 = new Stack<>();
-    try {
-      st1.push("a");
-      st1.push("b");
-      st1.push("c");
-      st1.pop();
-      st1.pop();
-      st1.pop();
-    } catch (Exception e) {
-      System.out.println(e.getMessage());
-    }
-    assertNull(st1.top, "test stack multiple pop");
-  }
-
-  //  Can successfully peek the next item on the stack
-  @Test
-  public void testStackPeek() throws Exception {
-    Stack<String> st1 = new Stack<>();
-    st1.push("a");
-    st1.push("b");
-    st1.push("c");
-    st1.pop();
-
-    assertEquals("b", st1.peek(), "test stack peek");
-  }
-
-  //  Can successfully instantiate an empty stack
-  @Test
-  public void testStackEmpty() throws Exception {
-    Stack<String> st1 = new Stack<>();
-
-    assertNull(st1.top, "test instantiate an empty stack");
-  }
-
-  //  Calling pop or peek on empty stack raises exception
-  @Test
-  public void testStackError() {
-    Stack<String> st1 = new Stack<>();
-    try {
-      assertEquals("stack is empty", st1.peek(), "test peek on empty stack");
-      assertEquals("stack is empty", st1.pop(), "test pop on empty stack");
-    } catch (Exception e) {
-      e.printStackTrace();
-    }
-  }
-
-  //  Can successfully enqueue into a queue
-  @Test
-  public void testQueueEnqueue() {
-    Queue<Integer> q1 = new Queue<>();
-    q1.enqueue(5);
-
-    assertEquals(5,q1.front.value,"test enqueue one element into a queue");
-    assertEquals(5,q1.rear.value,"test enqueue one element into a queue");
-  }
-//  Can successfully enqueue multiple values into a queue
-@Test
-public void testQueueEnqueue2() {
-  Queue<Integer> q1 = new Queue<>();
-  q1.enqueue(5);
-  q1.enqueue(10);
-  q1.enqueue(3);
-
-  assertEquals(5,q1.front.value,"test enqueue multiple element into a queue");
-  assertEquals(3,q1.rear.value,"test enqueue multiple element into a queue");
-}
-//  Can successfully dequeue out of a queue the expected value
-@Test
-public void testQueueDequeue() throws Exception {
-  Queue<Integer> q1 = new Queue<>();
-  q1.enqueue(5);
-  q1.enqueue(10);
-  q1.enqueue(3);
-
-  assertEquals(5,q1.dequeue(),"test dequeue");
-  assertEquals(10,q1.front.value,"test front value after dequeue");
-}
-//  Can successfully peek into a queue, seeing the expected value
-@Test
-public void testQueuePeek() throws Exception {
-  Queue<Integer> q1 = new Queue<>();
-  q1.enqueue(5);
-  q1.enqueue(10);
-  q1.enqueue(3);
-  q1.dequeue();
-
-  assertEquals(10,q1.peek(),"test queue peek");
-}
-//  Can successfully empty a queue after multiple dequeues
-@Test
-public void testQueueDequeue2() throws Exception {
-  Queue<Integer> q1 = new Queue<>();
-  q1.enqueue(5);
-  q1.enqueue(10);
-  q1.enqueue(3);
-  q1.dequeue();
-  q1.dequeue();
-  q1.dequeue();
-
-  assertNull(q1.front,"test empty a queue after multiple dequeues");
-}
-//  Can successfully instantiate an empty queue
-@Test
-public void testQueueCreate() {
-  Queue<Integer> q1 = new Queue<>();
-
-  assertNull(q1.front,"test instantiate an empty queue");
-  assertNull(q1.rear,"test instantiate an empty queue");
-}
-//  Calling dequeue or peek on empty queue raises exception
-@Test
-public void testQueueError() {
-  Queue<Integer> q1 = new Queue<>();
-  try {
-    assertEquals("queue is empty", q1.peek(), "test peek on empty queue");
-    assertEquals("queue is empty", q1.dequeue(), "test dequeue on empty queue");
-  } catch (Exception e) {
-    e.printStackTrace();
-  }
-}
 }
