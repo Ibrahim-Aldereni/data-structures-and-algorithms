@@ -3,6 +3,8 @@
  */
 package stackAndQueue;
 
+import AnimalShelter.*;
+
 public class App {
   public static void main(String[] args) throws Exception {
     //////////////////////////////////// challenge 10 ///////////////////////////////////
@@ -57,18 +59,31 @@ public class App {
 //    System.out.println(q1.isEmpty());
 
     //////////////////////////////////// challenge 11 ///////////////////////////////////
-    //enqueue
-    PseudoQueue<Integer> pq1 = new PseudoQueue<>();
-    pq1.enqueue(20);
-    pq1.enqueue(15);
-    pq1.enqueue(10);
-    pq1.enqueue(5);
+//    //enqueue
+//    PseudoQueue<Integer> pq1 = new PseudoQueue<>();
+//    pq1.enqueue(20);
+//    pq1.enqueue(15);
+//    pq1.enqueue(10);
+//    pq1.enqueue(5);
+//
+//    System.out.println(pq1.toString());
+//    //dequeue
+//    pq1.dequeue();
+//    System.out.println(pq1.toString());
+//    pq1.dequeue();
+//    System.out.println(pq1.toString());
+    //////////////////////////////////// challenge 12 ///////////////////////////////////
+    AnimalShelter<Animal> shelter = new AnimalShelter<Animal>();
+    Dog dog1 = new Dog("puppy");
+    Cat cat1 = new Cat("meshmesh");
+    Dog dog2 = new Dog("bolt");
 
-    System.out.println(pq1.toString());
-    //dequeue
-    pq1.dequeue();
-    System.out.println(pq1.toString());
-    pq1.dequeue();
-    System.out.println(pq1.toString());
+    shelter.enqueue(dog1);
+    shelter.enqueue(dog1);
+    shelter.enqueue(dog2);
+
+    System.out.println(shelter.front.value.name);
+    System.out.println(shelter.rear.value.name);
+    System.out.println(shelter.dequeue("cat").name);
   }
 }

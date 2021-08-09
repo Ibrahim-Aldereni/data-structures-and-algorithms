@@ -3,6 +3,7 @@
  */
 package stackAndQueue;
 
+import AnimalShelter.*;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
@@ -173,32 +174,110 @@ class AppTest {
 //  }
 
   //////////////////////////////////// challenge 11 ///////////////////////////////////
+//  //enqueue
+//  @Test public void testPseudoQueue(){
+//    PseudoQueue<Integer> pq1 = new PseudoQueue<>();
+//    pq1.enqueue(20);
+//    pq1.enqueue(15);
+//    pq1.enqueue(10);
+//    pq1.enqueue(5);
+//
+//    // output should be :
+//    String out = "[5]->[10]->[15]->[20]->NULL";
+//
+//    assertEquals(out,pq1.toString());
+//  }
+//
+//  //dequeue
+//  @Test public void testPseudoQueue2() throws Exception {
+//    PseudoQueue<Integer> pq1 = new PseudoQueue<>();
+//    pq1.enqueue(20);
+//    pq1.enqueue(15);
+//    pq1.enqueue(10);
+//    pq1.enqueue(5);
+//    pq1.dequeue();
+//    // output should be :
+//    String out = "[5]->[10]->[15]->NULL";
+//
+//    assertEquals(out,pq1.toString());
+//  }
+  //////////////////////////////////// challenge 12 ///////////////////////////////////
+
   //enqueue
-  @Test public void testPseudoQueue(){
-    PseudoQueue<Integer> pq1 = new PseudoQueue<>();
-    pq1.enqueue(20);
-    pq1.enqueue(15);
-    pq1.enqueue(10);
-    pq1.enqueue(5);
+  @Test public void testAnimalShelter(){
+    AnimalShelter<Animal> shelter = new AnimalShelter<Animal>();
+    Dog dog1 = new Dog("puppy");
+    Cat cat1 = new Cat("meshmesh");
+    Dog dog2 = new Dog("bolt");
+    shelter.enqueue(dog1);
+    shelter.enqueue(cat1);
+    shelter.enqueue(dog2);
 
-    // output should be :
-    String out = "[5]->[10]->[15]->[20]->NULL";
-
-    assertEquals(out,pq1.toString());
+    assertEquals("puppy",shelter.front.value.name);
+    assertEquals("meshmesh",shelter.front.next.value.name);
+    assertEquals("bolt",shelter.rear.value.name);
   }
 
-  //dequeue
-  @Test public void testPseudoQueue2() throws Exception {
-    PseudoQueue<Integer> pq1 = new PseudoQueue<>();
-    pq1.enqueue(20);
-    pq1.enqueue(15);
-    pq1.enqueue(10);
-    pq1.enqueue(5);
-    pq1.dequeue();
-    // output should be :
-    String out = "[5]->[10]->[15]->NULL";
-
-    assertEquals(out,pq1.toString());
+  //dequeue empty
+  @Test public void testAnimalShelter2(){
+    AnimalShelter<Animal> shelter = new AnimalShelter<Animal>();
+    Dog dog1 = new Dog("puppy");
+    Cat cat1 = new Cat("meshmesh");
+    Dog dog2 = new Dog("bolt");
+    try {
+      shelter.dequeue("dog");
+    } catch (Exception e) {
+      assertEquals("queue is empty",e.getMessage());
+    }
   }
 
+  //dequeue dog exist
+  @Test public void testAnimalShelter3(){
+    try {
+      AnimalShelter<Animal> shelter = new AnimalShelter<Animal>();
+      Dog dog1 = new Dog("puppy");
+      Cat cat1 = new Cat("meshmesh");
+      Dog dog2 = new Dog("bolt");
+      shelter.enqueue(dog1);
+      shelter.enqueue(cat1);
+      shelter.enqueue(dog2);
+      assertEquals("puppy", shelter.dequeue("dog").name);
+      assertEquals("meshmesh",shelter.front.value.name);
+    } catch (Exception e) {
+      System.out.println(e.getMessage());
+    }
+  }
+
+  //dequeue cat exist
+  @Test public void testAnimalShelter4(){
+    try {
+      AnimalShelter<Animal> shelter = new AnimalShelter<Animal>();
+      Dog dog1 = new Dog("puppy");
+      Cat cat1 = new Cat("meshmesh");
+      Dog dog2 = new Dog("bolt");
+      shelter.enqueue(dog1);
+      shelter.enqueue(cat1);
+      shelter.enqueue(dog2);
+      assertEquals("meshmesh", shelter.dequeue("cat").name);
+      assertEquals("bolt",shelter.front.value.name);
+      assertEquals("bolt",shelter.rear.value.name);
+    } catch (Exception e) {
+      System.out.println(e.getMessage());
+    }
+  }
+
+  //dequeue not exist
+  @Test public void testAnimalShelter5(){
+    try {
+      AnimalShelter<Animal> shelter = new AnimalShelter<Animal>();
+      Dog dog1 = new Dog("puppy");
+      Cat cat1 = new Cat("meshmesh");
+      Dog dog2 = new Dog("bolt");
+      shelter.enqueue(dog1);
+      shelter.enqueue(dog2);
+      assertEquals("null", shelter.dequeue("cat").name);
+    } catch (Exception e) {
+      System.out.println(e.getMessage());
+    }
+  }
 }

@@ -31,6 +31,8 @@
 
 - challenge 11 >> Implement a Queue using two Stacks.
 
+- challenge 12 >> Create a class called AnimalShelter which holds only dogs and cats. The shelter operates using a first-in, first-out approach.
+
 ## Approach & Efficiency
 
 - challenge 10:
@@ -39,6 +41,12 @@
   - Space: O(1)
 
 - challenge 11:
+
+  - Time: O(n)
+  - Space: O(1)
+
+- challenge 12:
+
   - Time: O(n)
   - Space: O(1)
 
@@ -57,5 +65,10 @@
 
 - **enqueue** > Inserts value into the PseudoQueue, using a first-in, first-out approach.
 - **dequeue** > Extracts a value from the PseudoQueue, using a first-in, first-out approach
+
+### challege 12:
+
+- **enqueue** > Inserts dog or a cat object to the queue.
+- **dequeue** > Accept "dog" or "cat" and return either a dog or a cat, based on preference. If pref is not "dog" or "cat" then return null.
 
 [Back to table of contenets](../README.md)
