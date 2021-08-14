@@ -203,81 +203,93 @@ class AppTest {
 //  }
   //////////////////////////////////// challenge 12 ///////////////////////////////////
 
-  //enqueue
-  @Test public void testAnimalShelter(){
-    AnimalShelter<Animal> shelter = new AnimalShelter<Animal>();
-    Dog dog1 = new Dog("puppy");
-    Cat cat1 = new Cat("meshmesh");
-    Dog dog2 = new Dog("bolt");
-    shelter.enqueue(dog1);
-    shelter.enqueue(cat1);
-    shelter.enqueue(dog2);
+//  //enqueue
+//  @Test public void testAnimalShelter(){
+//    AnimalShelter<Animal> shelter = new AnimalShelter<Animal>();
+//    Dog dog1 = new Dog("puppy");
+//    Cat cat1 = new Cat("meshmesh");
+//    Dog dog2 = new Dog("bolt");
+//    shelter.enqueue(dog1);
+//    shelter.enqueue(cat1);
+//    shelter.enqueue(dog2);
+//
+//    assertEquals("puppy",shelter.front.value.name);
+//    assertEquals("meshmesh",shelter.front.next.value.name);
+//    assertEquals("bolt",shelter.rear.value.name);
+//  }
+//
+//  //dequeue empty
+//  @Test public void testAnimalShelter2(){
+//    AnimalShelter<Animal> shelter = new AnimalShelter<Animal>();
+//    Dog dog1 = new Dog("puppy");
+//    Cat cat1 = new Cat("meshmesh");
+//    Dog dog2 = new Dog("bolt");
+//    try {
+//      shelter.dequeue("dog");
+//    } catch (Exception e) {
+//      assertEquals("queue is empty",e.getMessage());
+//    }
+//  }
+//
+//  //dequeue dog exist
+//  @Test public void testAnimalShelter3(){
+//    try {
+//      AnimalShelter<Animal> shelter = new AnimalShelter<Animal>();
+//      Dog dog1 = new Dog("puppy");
+//      Cat cat1 = new Cat("meshmesh");
+//      Dog dog2 = new Dog("bolt");
+//      shelter.enqueue(dog1);
+//      shelter.enqueue(cat1);
+//      shelter.enqueue(dog2);
+//      assertEquals("puppy", shelter.dequeue("dog").name);
+//      assertEquals("meshmesh",shelter.front.value.name);
+//    } catch (Exception e) {
+//      System.out.println(e.getMessage());
+//    }
+//  }
+//
+//  //dequeue cat exist
+//  @Test public void testAnimalShelter4(){
+//    try {
+//      AnimalShelter<Animal> shelter = new AnimalShelter<Animal>();
+//      Dog dog1 = new Dog("puppy");
+//      Cat cat1 = new Cat("meshmesh");
+//      Dog dog2 = new Dog("bolt");
+//      shelter.enqueue(dog1);
+//      shelter.enqueue(cat1);
+//      shelter.enqueue(dog2);
+//      assertEquals("meshmesh", shelter.dequeue("cat").name);
+//      assertEquals("bolt",shelter.front.value.name);
+//      assertEquals("bolt",shelter.rear.value.name);
+//    } catch (Exception e) {
+//      System.out.println(e.getMessage());
+//    }
+//  }
+//
+//  //dequeue not exist
+//  @Test public void testAnimalShelter5(){
+//    try {
+//      AnimalShelter<Animal> shelter = new AnimalShelter<Animal>();
+//      Dog dog1 = new Dog("puppy");
+//      Cat cat1 = new Cat("meshmesh");
+//      Dog dog2 = new Dog("bolt");
+//      shelter.enqueue(dog1);
+//      shelter.enqueue(dog2);
+//      assertEquals("null", shelter.dequeue("cat").name);
+//    } catch (Exception e) {
+//      System.out.println(e.getMessage());
+//    }
+//  }
 
-    assertEquals("puppy",shelter.front.value.name);
-    assertEquals("meshmesh",shelter.front.next.value.name);
-    assertEquals("bolt",shelter.rear.value.name);
-  }
-
-  //dequeue empty
-  @Test public void testAnimalShelter2(){
-    AnimalShelter<Animal> shelter = new AnimalShelter<Animal>();
-    Dog dog1 = new Dog("puppy");
-    Cat cat1 = new Cat("meshmesh");
-    Dog dog2 = new Dog("bolt");
-    try {
-      shelter.dequeue("dog");
-    } catch (Exception e) {
-      assertEquals("queue is empty",e.getMessage());
-    }
-  }
-
-  //dequeue dog exist
-  @Test public void testAnimalShelter3(){
-    try {
-      AnimalShelter<Animal> shelter = new AnimalShelter<Animal>();
-      Dog dog1 = new Dog("puppy");
-      Cat cat1 = new Cat("meshmesh");
-      Dog dog2 = new Dog("bolt");
-      shelter.enqueue(dog1);
-      shelter.enqueue(cat1);
-      shelter.enqueue(dog2);
-      assertEquals("puppy", shelter.dequeue("dog").name);
-      assertEquals("meshmesh",shelter.front.value.name);
-    } catch (Exception e) {
-      System.out.println(e.getMessage());
-    }
-  }
-
-  //dequeue cat exist
-  @Test public void testAnimalShelter4(){
-    try {
-      AnimalShelter<Animal> shelter = new AnimalShelter<Animal>();
-      Dog dog1 = new Dog("puppy");
-      Cat cat1 = new Cat("meshmesh");
-      Dog dog2 = new Dog("bolt");
-      shelter.enqueue(dog1);
-      shelter.enqueue(cat1);
-      shelter.enqueue(dog2);
-      assertEquals("meshmesh", shelter.dequeue("cat").name);
-      assertEquals("bolt",shelter.front.value.name);
-      assertEquals("bolt",shelter.rear.value.name);
-    } catch (Exception e) {
-      System.out.println(e.getMessage());
-    }
-  }
-
-  //dequeue not exist
-  @Test public void testAnimalShelter5(){
-    try {
-      AnimalShelter<Animal> shelter = new AnimalShelter<Animal>();
-      Dog dog1 = new Dog("puppy");
-      Cat cat1 = new Cat("meshmesh");
-      Dog dog2 = new Dog("bolt");
-      shelter.enqueue(dog1);
-      shelter.enqueue(dog2);
-      assertEquals("null", shelter.dequeue("cat").name);
-    } catch (Exception e) {
-      System.out.println(e.getMessage());
-    }
+  //////////////////////////////////// challenge 13 ///////////////////////////////////
+  @Test void testValidateBrackets() throws Exception {
+    // false cases
+    assertFalse(App.validateBrackets("{(})"));
+    assertFalse(App.validateBrackets(""));
+    assertFalse(App.validateBrackets("}"));
+    // true cases
+    assertTrue(App.validateBrackets("}{"));
+    assertTrue(App.validateBrackets("{}{Code}[Fellows](())"));
+    assertTrue(App.validateBrackets("}{[()]"));
   }
 }
