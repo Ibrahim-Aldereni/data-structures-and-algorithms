@@ -5,7 +5,49 @@ package stackAndQueue;
 
 import AnimalShelter.*;
 
+import java.util.regex.Pattern;
+
 public class App {
+  //////////////////////////////////// challenge 13 ///////////////////////////////////
+  public static boolean validateBrackets(String brackets) throws Exception {
+    // init stack
+    Stack<Character> stack = new Stack<>();
+    // this variable to get first character from the string not from the stack(cuz stack top will change)
+    Character topValue = null;
+    // fill stack with brackets only
+    for (int i = 0; i < brackets.length(); i++) {
+      if (brackets.charAt(i) == '[' || brackets.charAt(i) == ']' || brackets.charAt(i) == '}' || brackets.charAt(i) == '{' || brackets.charAt(i) == ')' || brackets.charAt(i) == '(') {
+        stack.push(brackets.charAt(i));
+        topValue = brackets.charAt(i);
+      }
+    }
+
+    boolean out = false;
+
+    if(!stack.isEmpty()){ // if empty string is entered
+      while (stack.top.next != null) { // why top.next?? to keep the last character in the stack
+        if ((stack.top.next.value.toString() + stack.top.value.toString()).equals("{}") || (stack.top.next.value.toString() + stack.top.value.toString()).equals("[]") || (stack.top.next.value.toString() + stack.top.value.toString()).equals("()") || (stack.top.next.value.toString() + stack.top.value.toString()).equals(")(") || (stack.top.next.value.toString() + stack.top.value.toString()).equals("][") || (stack.top.next.value.toString() + stack.top.value.toString()).equals("}{")) {
+          // here if two character match they will be popped
+          stack.pop();
+          stack.pop();
+          if (stack.top == null) break;
+        } else {
+          stack.pop();
+        }
+      }
+
+      if (stack.isEmpty()) { // if stack is empty after the while loop so all brackets match
+        out = true;
+      } else { // if not so the last one must be compared to the first one to see if they are match
+        if ((topValue.toString() + stack.top.value.toString()).equals("{}") || (topValue.toString() + stack.top.value.toString()).equals("}{") || (topValue.toString() + stack.top.value.toString()).equals("[]") || (topValue.toString() + stack.top.value.toString()).equals("][") || (topValue.toString() + stack.top.value.toString()).equals("()") || (topValue.toString() + stack.top.value.toString()).equals(")(")) {
+          out = true;
+        }
+      }
+    }
+
+    return out;
+  }
+
   public static void main(String[] args) throws Exception {
     //////////////////////////////////// challenge 10 ///////////////////////////////////
     ////////////////Stack/////////////////
@@ -73,17 +115,24 @@ public class App {
 //    pq1.dequeue();
 //    System.out.println(pq1.toString());
     //////////////////////////////////// challenge 12 ///////////////////////////////////
-    AnimalShelter<Animal> shelter = new AnimalShelter<Animal>();
-    Dog dog1 = new Dog("puppy");
-    Cat cat1 = new Cat("meshmesh");
-    Dog dog2 = new Dog("bolt");
+//    AnimalShelter<Animal> shelter = new AnimalShelter<Animal>();
+//    Dog dog1 = new Dog("puppy");
+//    Cat cat1 = new Cat("meshmesh");
+//    Dog dog2 = new Dog("bolt");
+//
+//    shelter.enqueue(dog1);
+//    shelter.enqueue(dog1);
+//    shelter.enqueue(dog2);
+//
+//    System.out.println(shelter.front.value.name);
+//    System.out.println(shelter.rear.value.name);
+//    System.out.println(shelter.dequeue("cat").name);
 
-    shelter.enqueue(dog1);
-    shelter.enqueue(dog1);
-    shelter.enqueue(dog2);
-
-    System.out.println(shelter.front.value.name);
-    System.out.println(shelter.rear.value.name);
-    System.out.println(shelter.dequeue("cat").name);
+    //////////////////////////////////// challenge 13 ///////////////////////////////////
+    System.out.println(validateBrackets("{(})"));
+    System.out.println(validateBrackets("{}"));
+    System.out.println(validateBrackets("}"));
+    System.out.println(validateBrackets(""));
+    System.out.println(validateBrackets("{}{Code}[Fellows](())"));
   }
 }

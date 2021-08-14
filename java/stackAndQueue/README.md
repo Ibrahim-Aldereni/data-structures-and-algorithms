@@ -33,6 +33,8 @@
 
 - challenge 12 >> Create a class called AnimalShelter which holds only dogs and cats. The shelter operates using a first-in, first-out approach.
 
+- challenge 13 >> Create a function called validate brackets and return whether or not the brackets in the string are balanced.
+
 ## Approach & Efficiency
 
 - challenge 10:
@@ -49,6 +51,11 @@
 
   - Time: O(n)
   - Space: O(1)
+
+- challenge 13:
+
+  - Time: O(2n)
+  - Space: O(n)
 
 ## API
 
@@ -70,5 +77,9 @@
 
 - **enqueue** > Inserts dog or a cat object to the queue.
 - **dequeue** > Accept "dog" or "cat" and return either a dog or a cat, based on preference. If pref is not "dog" or "cat" then return null.
+
+### challege 13:
+
+- **validateBrackets** > validate brackets and return whether or not the brackets in the string are balanced.
 
 [Back to table of contenets](../README.md)

@@ -1,11 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="stackAndQueue.AppTest" tests="5" skipped="0" failures="0" errors="0" timestamp="2021-08-09T12:46:05" hostname="IBA-LENOVO" time="0.025">
+<testsuite name="stackAndQueue.AppTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2021-08-14T14:50:30" hostname="IBA-LENOVO" time="0.027">
   <properties/>
-  <testcase name="testAnimalShelter()" classname="stackAndQueue.AppTest" time="0.02"/>
-  <testcase name="testAnimalShelter2()" classname="stackAndQueue.AppTest" time="0.0"/>
-  <testcase name="testAnimalShelter3()" classname="stackAndQueue.AppTest" time="0.0"/>
-  <testcase name="testAnimalShelter4()" classname="stackAndQueue.AppTest" time="0.001"/>
-  <testcase name="testAnimalShelter5()" classname="stackAndQueue.AppTest" time="0.001"/>
+  <testcase name="testValidateBrackets()" classname="stackAndQueue.AppTest" time="0.027"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>
