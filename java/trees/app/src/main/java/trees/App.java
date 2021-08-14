@@ -4,11 +4,21 @@
 package trees;
 
 public class App {
-    public String getGreeting() {
-        return "Hello World!";
-    }
-
     public static void main(String[] args) {
-        System.out.println(new App().getGreeting());
+      //////////////////////////////////////// challenge 15 ////////////////////////////////////////////////
+      BinarySearchTree<Integer> tree = new BinarySearchTree<>();
+      // test add
+      tree.add(10);
+      tree.add(20);
+      tree.add(8);
+      tree.add(5);
+      tree.add(9);
+      tree.add(30);
+      tree.add(15);
+
+      System.out.println(tree.postOrder(tree.root));
+
+      // test contains
+      System.out.println(tree.contains(50));
     }
 }
