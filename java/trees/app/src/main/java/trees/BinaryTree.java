@@ -3,7 +3,8 @@ package trees;
 import java.util.ArrayList;
 import java.util.List;
 
-public abstract class BinaryTree<T> {
+public class BinaryTree<T> {
+  public Node<T> root;
   private List<T> list = new ArrayList<>();
   //////////////////////////////////////// challenge 15 ////////////////////////////////////////////////
   public List<T> preOrder(Node<T> root) {
@@ -36,5 +37,21 @@ public abstract class BinaryTree<T> {
     list.add(root.value);
 
     return list;
+  }
+  //////////////////////////////////////// challenge 16 ///////////////////////////////////////////////
+  public int max(Node<Integer> node) {
+    if (node == null)
+      return -1;
+
+    int res = node.value;
+    int leftRes = max(node.left);
+    int rightRes = max(node.right);
+
+    if (leftRes > res)
+      res = leftRes;
+    if (rightRes > res)
+      res = rightRes;
+
+    return res;
   }
 }
