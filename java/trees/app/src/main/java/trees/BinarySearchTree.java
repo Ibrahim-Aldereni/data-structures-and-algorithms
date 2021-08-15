@@ -1,8 +1,6 @@
 package trees;
 
 public class BinarySearchTree<T> extends BinaryTree<T> {
-  public Node<T> root;
-
   public BinarySearchTree() {
   }
 
@@ -39,5 +37,4 @@ public class BinarySearchTree<T> extends BinaryTree<T> {
   public boolean contains(T value) {
     return contains(root, value);
   }
-
 }

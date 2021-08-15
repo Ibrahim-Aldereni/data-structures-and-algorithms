@@ -14,16 +14,29 @@
 
 - Challenge 15 >> Implement Binary Tree class with (pre order, in order and post order) methods, and Binary Search Tree with (add and contains) methods.
 
+- Challenge 16 >> Create a method to find the Maximum Value in a Binary Tree
+
 ## Approach & Efficiency
 
 - Challenge 15
+
+  - Time: O(1)
+  - Space: O(n)
+
+- Challenge 16
   - Time: O(1)
   - Space: O(n)
 
 ## API
 
-- **pre order** >> print trees content in (root >> left >> right) order.
-- **in order** >> print trees content in (left >> root >> right) order.
-- **post order** >> print trees content in (left >> right >> root) order.
-- **add** >> Adds a new node with that value in the correct location in the binary search tree.
-- **contains** >> return boolean indicating whether or not the value is in the tree at least once.
+- Challenge 15
+
+  - **pre order** >> print trees content in (root >> left >> right) order.
+  - **in order** >> print trees content in (left >> root >> right) order.
+  - **post order** >> print trees content in (left >> right >> root) order.
+  - **add** >> Adds a new node with that value in the correct location in the binary search tree.
+  - **contains** >> return boolean indicating whether or not the value is in the tree at least once.
+
+- Challenge 16
+
+  - **max** >> Find the maximum value stored in the tree.

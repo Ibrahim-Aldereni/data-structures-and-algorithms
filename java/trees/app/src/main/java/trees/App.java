@@ -6,19 +6,31 @@ package trees;
 public class App {
     public static void main(String[] args) {
       //////////////////////////////////////// challenge 15 ////////////////////////////////////////////////
-      BinarySearchTree<Integer> tree = new BinarySearchTree<>();
-      // test add
-      tree.add(10);
-      tree.add(20);
-      tree.add(8);
-      tree.add(5);
-      tree.add(9);
-      tree.add(30);
-      tree.add(15);
+//      BinarySearchTree<Integer> tree = new BinarySearchTree<>();
+//      // test add
+//      tree.add(10);
+//      tree.add(20);
+//      tree.add(8);
+//      tree.add(5);
+//      tree.add(9);
+//      tree.add(30);
+//      tree.add(15);
+//
+//      System.out.println(tree.postOrder(tree.root));
+//
+//      // test contains
+//      System.out.println(tree.contains(50));
+      //////////////////////////////////////// challenge 15 ////////////////////////////////////////////////
+      BinaryTree<Integer> tree = new BinaryTree<>();
+      tree.root = new Node<Integer>(2);
+      tree.root.left = new Node<Integer>(7);
+      tree.root.right = new Node<Integer>(5);
+      tree.root.left.right = new Node<Integer>(6);
+      tree.root.left.right.left = new Node<Integer>(1);
+      tree.root.left.right.right = new Node<Integer>(50);
+      tree.root.right.right = new Node<Integer>(9);
+      tree.root.right.right.left = new Node<Integer>(4);
 
-      System.out.println(tree.postOrder(tree.root));
-
-      // test contains
-      System.out.println(tree.contains(50));
+      System.out.println(tree.max(tree.root));
     }
 }

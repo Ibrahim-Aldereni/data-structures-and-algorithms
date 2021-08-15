@@ -87,4 +87,25 @@ class AppTest {
     List list = Arrays.asList(5, 9, 8, 15, 30, 20, 10);
     assertEquals(list,tree.postOrder(tree.root));
   }
+
+  //////////////////////////////////////// challenge 16 ///////////////////////////////////////////////
+  @Test void testMax(){
+    BinaryTree<Integer> tree = new BinaryTree<>();
+    tree.root = new Node<Integer>(2);
+    tree.root.left = new Node<Integer>(7);
+    tree.root.right = new Node<Integer>(5);
+    tree.root.left.right = new Node<Integer>(6);
+    tree.root.left.right.left = new Node<Integer>(1);
+    tree.root.left.right.right = new Node<Integer>(50);
+    tree.root.right.right = new Node<Integer>(9);
+    tree.root.right.right.left = new Node<Integer>(4);
+
+    assertEquals(50,tree.max(tree.root));
+  }
+  // empty tree
+  @Test void testMax2(){
+    BinaryTree<Integer> tree = new BinaryTree<>();
+
+    assertEquals(-1,tree.max(tree.root));
+  }
 }
