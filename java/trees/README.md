@@ -16,6 +16,8 @@
 
 - Challenge 16 >> Create a method to find the Maximum Value in a Binary Tree
 
+- Challenge 17 >> Create a method to do Breadth-first Traversal.
+
 ## Approach & Efficiency
 
 - Challenge 15
@@ -24,7 +26,13 @@
   - Space: O(n)
 
 - Challenge 16
+
   - Time: O(1)
+  - Space: O(n)
+
+- Challenge 17
+
+  - Time: O(n)
   - Space: O(n)
 
 ## API
@@ -40,3 +48,7 @@
 - Challenge 16
 
   - **max** >> Find the maximum value stored in the tree.
+
+- Challenge 17
+
+  - **breadth first** >> return list of all values in the tree, in Breadth-first approach

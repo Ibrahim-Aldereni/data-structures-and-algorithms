@@ -108,4 +108,29 @@ class AppTest {
 
     assertEquals(-1,tree.max(tree.root));
   }
+
+  //////////////////////////////////////// challenge 17 ///////////////////////////////////////////////
+  @Test void testBreadthFirst() throws Exception {
+    BinarySearchTree<Integer> tree = new BinarySearchTree<>();
+    tree.add(10);
+    tree.add(20);
+    tree.add(8);
+    tree.add(5);
+    tree.add(9);
+    tree.add(30);
+    tree.add(15);
+    // output must be
+    List list = Arrays.asList(10, 8, 20, 5, 9, 15, 30);
+
+    assertEquals(list,tree.breadthFirst(tree));
+  }
+
+  // test empty tree
+  @Test void testBreadthFirst2() throws Exception {
+    BinarySearchTree<Integer> tree = new BinarySearchTree<>();
+    // output must be
+    List list = new ArrayList();
+
+    assertEquals(list,tree.breadthFirst(tree));
+  }
 }

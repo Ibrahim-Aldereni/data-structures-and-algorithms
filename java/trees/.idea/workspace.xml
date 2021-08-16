@@ -5,10 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e6097bc9-6d9c-4138-85b8-3889c7e3cc62" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/trees/NodeQueue.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/trees/Queue.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/trees/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/trees/App.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/trees/BinarySearchTree.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/trees/BinarySearchTree.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/trees/BinaryTree.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/trees/BinaryTree.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/test/java/trees/AppTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/test/java/trees/AppTest.java" afterDir="false" />
     </list>
@@ -25,6 +25,7 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
@@ -46,7 +47,7 @@
     <property name="project.structure.side.proportion" value="0.0" />
     <property name="settings.editor.selected.configurable" value="preferences.keymap" />
   </component>
-  <component name="RunManager" selected="Gradle.AppTest">
+  <component name="RunManager" selected="Gradle.AppTest.testBreadthFirst2">
     <configuration name="App" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="trees.App" />
       <module name="trees.app.main" />
@@ -66,6 +67,27 @@
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
         <option name="externalSystemIdString" value="GRADLE" />
         <option name="scriptParameters" value="--tests &quot;trees.AppTest&quot;" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":app:test" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="AppTest.testBreadthFirst2" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="--tests &quot;trees.AppTest.testBreadthFirst2&quot;" />
         <option name="taskDescriptions">
           <list />
         </option>
@@ -104,6 +126,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.AppTest.testBreadthFirst2" />
         <item itemvalue="Gradle.AppTest" />
         <item itemvalue="Gradle.AppTest.testTree4" />
         <item itemvalue="Application.App" />
