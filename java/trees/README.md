@@ -18,6 +18,8 @@
 
 - Challenge 17 >> Create a method to do Breadth-first Traversal.
 
+- Challenge 18 >> Conduct “FizzBuzz” on a k-ary tree while traversing through it to create a new tree.
+
 ## Approach & Efficiency
 
 - Challenge 15
@@ -31,6 +33,11 @@
   - Space: O(n)
 
 - Challenge 17
+
+  - Time: O(n)
+  - Space: O(n)
+
+- Challenge 18
 
   - Time: O(n)
   - Space: O(n)
@@ -52,3 +59,7 @@
 - Challenge 17
 
   - **breadth first** >> return list of all values in the tree, in Breadth-first approach
+
+- Challenge 18
+
+  - **fizz buzz tree** >> return k-ary of fizz,buzz and fizzBuzz values
