@@ -133,4 +133,20 @@ class AppTest {
 
     assertEquals(list,tree.breadthFirst(tree));
   }
+
+  //////////////////////////////////////// challenge 18 ///////////////////////////////////////////////
+  @Test void testFizzBuzz(){
+    int k = 3;
+    KTreeNode root = new KTreeNode(k, 1);
+    root.children[0] = new KTreeNode(k, 2);
+    root.children[1] = new KTreeNode(k, 3);
+    root.children[2] = new KTreeNode(k, 4);
+    root.children[0].children[0] = new KTreeNode(k, 5);
+    root.children[0].children[1] = new KTreeNode(k, 6);
+    root.children[0].children[2] = new KTreeNode(k, 7);
+    // output should be
+    List<String> out = List.of("Buzz, Fizz, 2, 7, Fizz, 1, 4");
+
+    assertEquals(out.toString(),App.FizzBuzz(root).toString());
+  }
 }

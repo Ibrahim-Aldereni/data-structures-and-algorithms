@@ -3,7 +3,40 @@
  */
 package trees;
 
+import java.util.ArrayList;
+import java.util.List;
+
+
 public class App {
+  //////////////////////////////////////// challenge 18 ////////////////////////////////////////////////
+  public static List<String> out = new ArrayList<>();
+  public static List<String> FizzBuzz(KTreeNode node) {
+    if (node == null) {
+      return out;
+    }
+
+    // Total children count
+    int total = node.children.length;
+    // All the children except the last
+    for (int i = 0; i < total - 1; i++)
+      FizzBuzz(node.children[i]);
+
+    if(node.data %3 == 0 && node.data %5 == 0)
+      out.add("FizzBuzz");
+    else if(node.data %3 == 0)
+      out.add("Fizz");
+    else if(node.data %5 == 0)
+      out.add("Buzz");
+    else{
+      String str = Integer.toString(node.data);
+      out.add(str);
+    }
+    // Last child
+    FizzBuzz(node.children[total - 1]);
+
+    return out;
+  }
+
   public static void main(String[] args) throws Exception {
     //////////////////////////////////////// challenge 15 ////////////////////////////////////////////////
 //      BinarySearchTree<Integer> tree = new BinarySearchTree<>();
@@ -34,16 +67,27 @@ public class App {
 //      System.out.println(tree.max(tree.root));
 
     //////////////////////////////////////// challenge 17 ////////////////////////////////////////////////
-    BinarySearchTree<Integer> tree = new BinarySearchTree<>();
-    tree.add(10);
-    tree.add(20);
-    tree.add(8);
-    tree.add(5);
-    tree.add(9);
-    tree.add(30);
-    tree.add(15);
+//    BinarySearchTree<Integer> tree = new BinarySearchTree<>();
+//    tree.add(10);
+//    tree.add(20);
+//    tree.add(8);
+//    tree.add(5);
+//    tree.add(9);
+//    tree.add(30);
+//    tree.add(15);
+//
+//    System.out.println(tree.breadthFirst(tree));
 
-    System.out.println(tree.breadthFirst(tree));
+  //////////////////////////////////////// challenge 18 ////////////////////////////////////////////////
+    int k = 3;
+    KTreeNode root = new KTreeNode(k, 1);
+    root.children[0] = new KTreeNode(k, 2);
+    root.children[1] = new KTreeNode(k, 3);
+    root.children[2] = new KTreeNode(k, 4);
+    root.children[0].children[0] = new KTreeNode(k, 5);
+    root.children[0].children[1] = new KTreeNode(k, 6);
+    root.children[0].children[2] = new KTreeNode(k, 7);
 
+    System.out.println(FizzBuzz(root));
   }
 }
