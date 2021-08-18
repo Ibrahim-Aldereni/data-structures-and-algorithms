@@ -63,3 +63,13 @@
 - Challenge 18
 
   - **fizz buzz tree** >> return k-ary of fizz,buzz and fizzBuzz values
+
+## WhiteBoards
+
+- Challenge 16
+
+  ![ch16](../img/ch16.png)
+
+- Challenge 17
+
+  ![ch17](../img/ch17.png)

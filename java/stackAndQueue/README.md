@@ -82,4 +82,10 @@
 
 - **validateBrackets** > validate brackets and return whether or not the brackets in the string are balanced.
 
+## WhiteBoards
+
+- Challenge 13
+
+![ch13](../img/ch13.png)
+
 [Back to table of contenets](../README.md)
