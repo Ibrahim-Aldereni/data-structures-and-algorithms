@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="insertionSort.AppTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2021-08-29T19:05:20" hostname="IBA-LENOVO" time="0.019">
+  <properties/>
+  <testcase name="insertionSort2()" classname="insertionSort.AppTest" time="0.019"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
