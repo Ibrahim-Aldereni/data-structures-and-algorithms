@@ -3,7 +3,14 @@
  */
 package insertionSort;
 
+import com.google.common.collect.ObjectArrays;
+
+import java.net.CookieHandler;
+import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Collections;
+import java.util.List;
+import java.util.stream.Stream;
 
 public class App {
   ////////////////////////////////////// Challenge: 26 //////////////////////////////////////
@@ -34,18 +41,69 @@ public class App {
     return arr;
   }
 
+  ////////////////////////////////////// Challenge: 27 //////////////////////////////////////
+  public static Integer[] merge(Integer[] left, Integer[] right, Integer[] arr) {
+    int i = 0, j = 0, k = 0;
+
+    while (i < left.length && j < right.length) {
+      if (left[i] <= right[j]) {
+        arr[k] = left[i];
+        i++;
+      } else {
+        arr[k] = right[j];
+        j++;
+      }
+      k++;
+    }
+
+    if(i == left.length){
+      //??
+    }else {
+      //??
+    }
+    return arr;
+  }
+
+
+  public static Integer[] mergeSort(Integer[] arr) {
+    int n = arr.length;
+    if (n > 1) {
+      int mid = n / 2;
+      // split array to 2 half's
+      Integer[] left = new Integer[mid]; // 0-mid
+      Integer[] right = new Integer[n - mid]; // mid-n
+
+      //source arr,start position, destination arr, start position at destination arr, number of elements to copy
+      System.arraycopy(arr, 0, left, 0, mid);
+      System.arraycopy(arr, mid, right, 0, right.length);
+
+      // sort the left side
+      mergeSort(left);
+      // sort the right side
+      mergeSort(right);
+      // merge the sorted left and right sides together
+      merge(left, right, arr);
+    }
+    return arr;
+  }
+
   public static void main(String[] args) {
-    // normal case
-    int[] arr = {8, 4, 23, 42, 16, 15};
-    // Reverse-sorted
-    int[] arr2 = {20, 18, 12, 8, 5, -2};
-    // Nearly-sorted
-    int[] arr3 = {2, 3, 5, 7, 13, 11};
-    // Few uniques
-    int[] arr4 = {5, 12, 7, 5, 5, 7};
-    System.out.println(Arrays.toString(insertionSort(arr)));
-    System.out.println(Arrays.toString(insertionSort(arr2)));
-    System.out.println(Arrays.toString(insertionSort(arr3)));
-    System.out.println(Arrays.toString(insertionSort(arr4)));
+    ////////////////////////////////////// Challenge: 26 //////////////////////////////////////
+//    // normal case
+//    int[] arr = {8, 4, 23, 42, 16, 15};
+//    // Reverse-sorted
+//    int[] arr2 = {20, 18, 12, 8, 5, -2};
+//    // Nearly-sorted
+//    int[] arr3 = {2, 3, 5, 7, 13, 11};
+//    // Few uniques
+//    int[] arr4 = {5, 12, 7, 5, 5, 7};
+//    System.out.println(Arrays.toString(insertionSort(arr)));
+//    System.out.println(Arrays.toString(insertionSort(arr2)));
+//    System.out.println(Arrays.toString(insertionSort(arr3)));
+//    System.out.println(Arrays.toString(insertionSort(arr4)));
+
+    ////////////////////////////////////// Challenge: 27 //////////////////////////////////////
+    Integer[] arr = {8, 4, 23, 42, 16, 15};
+    System.out.println(Arrays.toString(mergeSort(arr)));
   }
 }
