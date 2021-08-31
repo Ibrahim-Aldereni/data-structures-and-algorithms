@@ -4,7 +4,7 @@
 
 > Sample Array: [8,4,23,42,16,15]
 
-![insertionSort](img/insertionSort.png)
+![insertionSort](../img/insertionSort.png)
 
 ## Efficency
 
