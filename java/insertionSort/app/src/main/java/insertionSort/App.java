@@ -42,46 +42,43 @@ public class App {
   }
 
   ////////////////////////////////////// Challenge: 27 //////////////////////////////////////
-  public static Integer[] merge(Integer[] left, Integer[] right, Integer[] arr) {
+  public static void merge(int[] left, int[] right, int[] arr) {
     int i = 0, j = 0, k = 0;
 
     while (i < left.length && j < right.length) {
       if (left[i] <= right[j]) {
-        arr[k] = left[i];
-        i++;
+        arr[k++] = left[i++];
       } else {
-        arr[k] = right[j];
-        j++;
+        arr[k++] = right[j++];
       }
-      k++;
     }
-
-    if(i == left.length){
-      //??
-    }else {
-      //??
+    while (i < left.length) {
+      arr[k++] = left[i++];
     }
-    return arr;
+    while (j < right.length) {
+      arr[k++] = right[j++];
+    }
   }
 
 
-  public static Integer[] mergeSort(Integer[] arr) {
+  public static int[] mergeSort(int[] arr) {
     int n = arr.length;
     if (n > 1) {
       int mid = n / 2;
-      // split array to 2 half's
-      Integer[] left = new Integer[mid]; // 0-mid
-      Integer[] right = new Integer[n - mid]; // mid-n
+      int[] left = new int[mid];
+      int[] right = new int[n - mid];
 
-      //source arr,start position, destination arr, start position at destination arr, number of elements to copy
-      System.arraycopy(arr, 0, left, 0, mid);
-      System.arraycopy(arr, mid, right, 0, right.length);
+      // split arr to 2 arrays left and right
+      for (int i = 0; i < mid; i++) {
+        left[i] = arr[i];
+      }
+      for (int i = mid; i < n; i++) {
+        right[i - mid] = arr[i];
+      }
 
-      // sort the left side
       mergeSort(left);
-      // sort the right side
       mergeSort(right);
-      // merge the sorted left and right sides together
+
       merge(left, right, arr);
     }
     return arr;
@@ -103,7 +100,7 @@ public class App {
 //    System.out.println(Arrays.toString(insertionSort(arr4)));
 
     ////////////////////////////////////// Challenge: 27 //////////////////////////////////////
-    Integer[] arr = {8, 4, 23, 42, 16, 15};
+    int[] arr = {8, 4, 23, 42, 16, 15};
     System.out.println(Arrays.toString(mergeSort(arr)));
   }
 }
