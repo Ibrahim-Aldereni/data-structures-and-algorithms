@@ -43,4 +43,23 @@ class AppTest {
 
     assertEquals(Arrays.toString(out), Arrays.toString(App.mergeSort(arr)));
   }
+
+  ////////////////////////////////////// Challenge: 28 //////////////////////////////////////
+
+  @Test void quickSort1() {
+    int[] arr = {8, 4, 23, 42, 16, 15};
+    // output must be
+    int[] out =  {4, 8, 15, 16, 23, 42};
+
+    assertEquals(Arrays.toString(out), Arrays.toString(App.quickSort(arr,0,5)));
+  }
+
+  @Test void quickSort2() {
+    int[] arr = {5, 12, 7, 5, 5, 7};
+    // output must be
+    int[] out =  {5, 5, 5, 7, 7, 12};
+
+    assertEquals(Arrays.toString(out), Arrays.toString(App.quickSort(arr,0,5)));
+  }
+
 }

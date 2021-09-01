@@ -1,10 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="insertionSort.AppTest" tests="4" skipped="0" failures="0" errors="0" timestamp="2021-08-31T11:16:21" hostname="IBA-LENOVO" time="0.02">
+<testsuite name="insertionSort.AppTest" tests="6" skipped="0" failures="0" errors="0" timestamp="2021-09-01T19:09:08" hostname="IBA-LENOVO" time="0.021">
   <properties/>
-  <testcase name="insertionSort1()" classname="insertionSort.AppTest" time="0.017"/>
-  <testcase name="insertionSort2()" classname="insertionSort.AppTest" time="0.0"/>
+  <testcase name="insertionSort1()" classname="insertionSort.AppTest" time="0.016"/>
+  <testcase name="insertionSort2()" classname="insertionSort.AppTest" time="0.001"/>
   <testcase name="mergeSort1()" classname="insertionSort.AppTest" time="0.0"/>
-  <testcase name="mergeSort2()" classname="insertionSort.AppTest" time="0.0"/>
+  <testcase name="mergeSort2()" classname="insertionSort.AppTest" time="0.001"/>
+  <testcase name="quickSort1()" classname="insertionSort.AppTest" time="0.001"/>
+  <testcase name="quickSort2()" classname="insertionSort.AppTest" time="0.001"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

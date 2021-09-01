@@ -42,7 +42,7 @@ public class App {
   }
 
   ////////////////////////////////////// Challenge: 27 //////////////////////////////////////
-  public static void merge(int[] left, int[] right, int[] arr) {
+  private static void merge(int[] left, int[] right, int[] arr) {
     int i = 0, j = 0, k = 0;
 
     while (i < left.length && j < right.length) {
@@ -84,6 +84,39 @@ public class App {
     return arr;
   }
 
+  ////////////////////////////////////// Challenge: 28 //////////////////////////////////////
+  private static int partition(int[] arr, int start, int end) {
+    int pivot = arr[end];
+    int i = (start - 1);
+
+    for (int j = start; j < end; j++) {
+      if (arr[j] <= pivot) {
+        i++;
+
+        int swap = arr[i];
+        arr[i] = arr[j];
+        arr[j] = swap;
+      }
+    }
+
+    int swap = arr[i + 1];
+    arr[i + 1] = arr[end];
+    arr[end] = swap;
+
+    return i + 1;
+  }
+
+  public static int[] quickSort(int[] arr, int start, int end) {
+    if (start < end) {
+      int position = partition(arr, start, end);
+
+      quickSort(arr, start, position - 1);
+      quickSort(arr, position + 1, end);
+    }
+    return arr;
+  }
+
+
   public static void main(String[] args) {
     ////////////////////////////////////// Challenge: 26 //////////////////////////////////////
 //    // normal case
@@ -100,7 +133,10 @@ public class App {
 //    System.out.println(Arrays.toString(insertionSort(arr4)));
 
     ////////////////////////////////////// Challenge: 27 //////////////////////////////////////
+//    int[] arr = {8, 4, 23, 42, 16, 15};
+//    System.out.println(Arrays.toString(mergeSort(arr)));
+    ////////////////////////////////////// Challenge: 28 //////////////////////////////////////
     int[] arr = {8, 4, 23, 42, 16, 15};
-    System.out.println(Arrays.toString(mergeSort(arr)));
+    System.out.println(Arrays.toString(quickSort(arr,0,5)));
   }
 }
