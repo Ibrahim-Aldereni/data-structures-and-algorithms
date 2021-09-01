@@ -14,6 +14,7 @@
       <change beforePath="$PROJECT_DIR$/app/build/classes/java/main/insertionSort/App.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/classes/java/main/insertionSort/App.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/tmp/compileJava/previous-compilation-data.bin" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/tmp/compileJava/previous-compilation-data.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/insertionSort/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/insertionSort/App.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/test/java/insertionSort/AppTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/test/java/insertionSort/AppTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
