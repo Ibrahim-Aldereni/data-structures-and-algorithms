@@ -1,10 +1,15 @@
 package hash.table;
 
 public class Node {
-  int data;
-  Node next;
+  public int key;
+  public Object value;
+  public Node next;
 
-  Node(int data){
-    this.data = data;
+  public Node() {
+  }
+
+  public Node(int key, Object value) {
+    this.key = key;
+    this.value = value;
   }
 }
