@@ -4,10 +4,16 @@
 package hash.table;
 
 public class App {
-  ///////////////////////////////////// challenge 30 ////////////////////////////////////
-
 
     public static void main(String[] args) {
+  ///////////////////////////////////// challenge 30 ////////////////////////////////////
+      HashTable<String> hashTable = new HashTable<>(10);
 
+      hashTable.add(11,"ahmad");
+      hashTable.add(12,"osama");
+      hashTable.add(12,"ibrahim");
+
+      System.out.println(hashTable.get(12));
+      System.out.println(hashTable.contains(11));
     }
 }
