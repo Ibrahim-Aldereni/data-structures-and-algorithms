@@ -12,20 +12,27 @@ public class HashTable<T> {
     }
   }
   ///////////////////////////////////// challenge 30 ////////////////////////////////////
-  public int hash(int key) {
-    return key % size;
+  private int hash(Object key) {
+    if(key.getClass().getSimpleName().equals("String")){
+      return Math.abs(key.hashCode()%size);
+    }else{
+      return (Integer) key % size;
+    }
   }
 
-  public void add(int key, Object value){
+  public void add(Object key, Object value){
     Node newItem = new Node(key,value);
     int hashIndex = hash(key);
-    Node arrValue = arrayHash[hashIndex];
 
-    newItem.next = arrValue.next;
-    arrValue.next = newItem;
+    if(arrayHash[hashIndex].key == null){
+      arrayHash[hashIndex] = newItem;
+    }else{
+      newItem.next = arrayHash[hashIndex].next;
+      arrayHash[hashIndex].next = newItem;
+    }
   }
 
-  public T get(int key){
+  public T get(Object key){
     T output = null;
 
     int hashIndex = hash(key);
@@ -41,15 +48,18 @@ public class HashTable<T> {
     return output;
   }
 
-  public boolean contains(int key){
+  public boolean contains(Object key){
     boolean output = false;
 
     int hashIndex = hash(key);
     Node arrValue = arrayHash[hashIndex];
 
-    while (arrValue != null){
-      if(arrValue.key == key){
+    while (arrValue.key != null){
+      if(arrValue.key.equals(key)){
         output = true;
+        break;
+      }
+      if(arrValue.next == null){
         break;
       }
       arrValue=arrValue.next;

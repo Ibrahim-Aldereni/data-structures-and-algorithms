@@ -5,15 +5,38 @@ package hash.table;
 
 public class App {
 
-    public static void main(String[] args) {
   ///////////////////////////////////// challenge 30 ////////////////////////////////////
-      HashTable<String> hashTable = new HashTable<>(10);
+  public static String repeatedWord(String words) {
+    String output = null;
+    // first let us split string into words
+    String[] wordsList = words.split(" ");
 
-      hashTable.add(11,"ahmad");
-      hashTable.add(12,"osama");
-      hashTable.add(12,"ibrahim");
+    // intilize hashtable
+    HashTable<Integer> hashTable = new HashTable<>(wordsList.length);
 
-      System.out.println(hashTable.get(12));
-      System.out.println(hashTable.contains(11));
+    // loop over the words list and save it in the hash table
+    for (int i = 0; i < wordsList.length; i++) {
+      if (hashTable.contains(wordsList[i])) {
+        output = wordsList[i];
+        break;
+      }
+      hashTable.add(wordsList[i].toLowerCase(), i);
     }
+    return output;
+  }
+
+  public static void main(String[] args) {
+    ///////////////////////////////////// challenge 30 ////////////////////////////////////
+//      HashTable<String> hashTable = new HashTable<>(10);
+//
+//      hashTable.add(11,"ahmad");
+//      hashTable.add(12,"osama");
+//      hashTable.add(12,"ibrahim");
+//
+//      System.out.println(hashTable.get(12));
+//      System.out.println(hashTable.contains(11));
+    ///////////////////////////////////// challenge 31////////////////////////////////////
+    String str1 ="Once upon a time, there was a brave princess who...";
+    System.out.println(repeatedWord(str1));
+  }
 }
