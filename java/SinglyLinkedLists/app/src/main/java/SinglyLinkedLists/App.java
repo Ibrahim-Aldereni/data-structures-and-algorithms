@@ -71,6 +71,39 @@ public class App {
     return list1.toStr().equals(list.toStr());
   }
 
+  ///////////////////////////////////// remove duplicates ///////////////////////////////
+  public static LinkedList removeDuplicate(LinkedList list){
+    Node current = list.head;
+    Node next = list.head.next;
+
+    while(current != null){
+      if(current.data == next.data){
+        current.next = next.next;
+      }
+      current = current.next;
+      if(current != null)
+        next = current.next;
+    }
+
+    return list;
+  }
+
+  //////////////////////////////////////////////// find max ///////////////////////////////////////////
+  public static int findMax(LinkedList list){
+    int max = 0;
+    Node current = list.head;
+    Node prev = current;
+    while(current != null){
+      if(current.data > prev.data)
+        max = current.data;
+
+      prev = current;
+      current= current.next;
+    }
+
+    return max;
+  }
+
   public static void main(String[] args) throws Exception {
     ////////////////////////////////////// code challenge 05 ///////////////////////////////////////////////
 //    LinkedList list1 = new LinkedList();
@@ -158,5 +191,18 @@ public class App {
 //    System.out.println(reversedList(list4).toStr());
 //    System.out.println(listPalindromeCheck(list4)); // if the reversed list and the original list are the same the
 //    // output is true
+
+    ////////////////////////////////////////// test remove duplicate //////////////////////////////////
+    LinkedList list4 = new LinkedList();
+    list4.append(1);
+    list4.append(1);
+    list4.append(2);
+    list4.append(2);
+    list4.append(3);
+    list4.append(3);
+    list4.append(6);
+
+//    System.out.println(removeDuplicate(list4).toStr());
+    System.out.println(findMax(list4));
   }
 }
