@@ -3,9 +3,12 @@
  */
 package hash.table;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class App {
 
-  ///////////////////////////////////// challenge 30 ////////////////////////////////////
+  ///////////////////////////////////// challenge 31 ////////////////////////////////////
   public static String repeatedWord(String words) {
     String output = null;
     // first let us split string into words
@@ -25,6 +28,28 @@ public class App {
     return output;
   }
 
+  ///////////////////////////////////// challenge 32 ////////////////////////////////////
+  public static List<Integer> treeIntersection(BinaryTree<Integer> binaryTree1, BinaryTree<Integer> binaryTree2) {
+    List<Integer> output = new ArrayList<>();
+
+    HashTable<Integer> hashTable = new HashTable<>(output.size() + 1);
+
+    // traverse the trees and
+    List<Integer> list1 = binaryTree1.inOrder(binaryTree1.root);
+    List<Integer> list2 = binaryTree2.inOrder(binaryTree2.root);
+
+    // add values to hashtable
+    for (int i = 0; i < list1.size(); i++) {
+      hashTable.add(list1.get(i), i);
+      if (hashTable.contains(list2.get(i))) {
+        output.add(list2.get(i));
+      } else {
+        hashTable.add(list2.get(i), i);
+      }
+    }
+    return output;
+  }
+
   public static void main(String[] args) {
     ///////////////////////////////////// challenge 30 ////////////////////////////////////
 //      HashTable<String> hashTable = new HashTable<>(10);
@@ -36,7 +61,36 @@ public class App {
 //      System.out.println(hashTable.get(12));
 //      System.out.println(hashTable.contains(11));
     ///////////////////////////////////// challenge 31////////////////////////////////////
-    String str1 ="Once upon a time, there was a brave princess who...";
-    System.out.println(repeatedWord(str1));
+//    String str1 ="Once upon a time, there was a brave princess who...";
+//    System.out.println(repeatedWord(str1));
+
+    ///////////////////////////////////// challenge 32 ////////////////////////////////////
+    BinaryTree<Integer> tree1 = new BinaryTree<>();
+    tree1.root = new TreeNode<Integer>(150);
+    tree1.root.left = new TreeNode<Integer>(100);
+    tree1.root.right = new TreeNode<Integer>(250);
+    tree1.root.left.left = new TreeNode<Integer>(75);
+    tree1.root.left.right = new TreeNode<Integer>(160);
+    tree1.root.left.right.left = new TreeNode<Integer>(125);
+    tree1.root.left.right.right = new TreeNode<Integer>(175);
+    tree1.root.right.left = new TreeNode<Integer>(200);
+    tree1.root.right.right = new TreeNode<Integer>(350);
+    tree1.root.right.right.left = new TreeNode<Integer>(300);
+    tree1.root.right.right.right = new TreeNode<Integer>(500);
+
+    BinaryTree<Integer> tree2 = new BinaryTree<>();
+    tree2.root = new TreeNode<Integer>(42);
+    tree2.root.left = new TreeNode<Integer>(100);
+    tree2.root.right = new TreeNode<Integer>(600);
+    tree2.root.left.left = new TreeNode<Integer>(15);
+    tree2.root.left.right = new TreeNode<Integer>(160);
+    tree2.root.left.right.left = new TreeNode<Integer>(125);
+    tree2.root.left.right.right = new TreeNode<Integer>(175);
+    tree2.root.right.left = new TreeNode<Integer>(200);
+    tree2.root.right.right = new TreeNode<Integer>(350);
+    tree2.root.right.right.left = new TreeNode<Integer>(4);
+    tree2.root.right.right.right = new TreeNode<Integer>(500);
+
+    System.out.println(treeIntersection(tree1,tree2));
   }
 }
