@@ -80,5 +80,24 @@ class AppTest {
     assertEquals(list,App.treeIntersection(tree1,tree2));
   }
 
+  ///////////////////////////////////// challenge 33 ////////////////////////////////////
+  @Test
+  void testHashTable4(){
+    HashTable<String> table1 = new HashTable<>(5);
+    HashTable<String> table2 = new HashTable<>(5);
+
+    table1.add("found", "enamored");
+    table1.add("guide", "usher");
+    table1.add("outfit", "garb");
+
+    table2.add("found", "averse");
+    table2.add("guide", "follow");
+    table2.add("flow", "jam");
+
+    // output must be
+    List<String> list = Arrays.asList("[found,averse,enamored]", "[flow,jam,NULL]", "[guide,follow,usher]");
+
+    assertEquals(list,App.leftJoin(table1,table2));
+  }
 
 }

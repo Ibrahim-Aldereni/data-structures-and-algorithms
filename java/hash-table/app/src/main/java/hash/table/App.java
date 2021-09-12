@@ -4,6 +4,7 @@
 package hash.table;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 public class App {
@@ -50,6 +51,29 @@ public class App {
     return output;
   }
 
+  ///////////////////////////////////// challenge 33 ////////////////////////////////////
+  public static List<String> leftJoin(HashTable table1, HashTable table2) {
+    List<String> output = new ArrayList<>();
+
+    for (int i = 0; i < table1.size; i++) {
+      if (table2.arrayHash[i].key != null) {
+        if (table1.contains(table2.arrayHash[i].key)) {
+          output.add("["+table2.arrayHash[i].key + "," + table2.arrayHash[i].value + "," + table1.get(table2.arrayHash[i].key)+"]");
+        } else {
+          output.add("["+table2.arrayHash[i].key + "," + table2.arrayHash[i].value + "," + "NULL"+"]");
+        }
+        if (table2.arrayHash[i].next != null) {
+          if (table1.contains(table2.arrayHash[i].next.key)) {
+            output.add("["+table2.arrayHash[i].next.key + "," + table2.arrayHash[i].next.value + "," + table1.get(table2.arrayHash[i].next.key)+"]");
+          } else {
+            output.add("["+table2.arrayHash[i].next.key + "," + table2.arrayHash[i].next.value + "," + "NULL"+"]");
+          }
+        }
+      }
+    }
+    return output;
+  }
+
   public static void main(String[] args) {
     ///////////////////////////////////// challenge 30 ////////////////////////////////////
 //      HashTable<String> hashTable = new HashTable<>(10);
@@ -65,32 +89,47 @@ public class App {
 //    System.out.println(repeatedWord(str1));
 
     ///////////////////////////////////// challenge 32 ////////////////////////////////////
-    BinaryTree<Integer> tree1 = new BinaryTree<>();
-    tree1.root = new TreeNode<Integer>(150);
-    tree1.root.left = new TreeNode<Integer>(100);
-    tree1.root.right = new TreeNode<Integer>(250);
-    tree1.root.left.left = new TreeNode<Integer>(75);
-    tree1.root.left.right = new TreeNode<Integer>(160);
-    tree1.root.left.right.left = new TreeNode<Integer>(125);
-    tree1.root.left.right.right = new TreeNode<Integer>(175);
-    tree1.root.right.left = new TreeNode<Integer>(200);
-    tree1.root.right.right = new TreeNode<Integer>(350);
-    tree1.root.right.right.left = new TreeNode<Integer>(300);
-    tree1.root.right.right.right = new TreeNode<Integer>(500);
+//    BinaryTree<Integer> tree1 = new BinaryTree<>();
+//    tree1.root = new TreeNode<Integer>(150);
+//    tree1.root.left = new TreeNode<Integer>(100);
+//    tree1.root.right = new TreeNode<Integer>(250);
+//    tree1.root.left.left = new TreeNode<Integer>(75);
+//    tree1.root.left.right = new TreeNode<Integer>(160);
+//    tree1.root.left.right.left = new TreeNode<Integer>(125);
+//    tree1.root.left.right.right = new TreeNode<Integer>(175);
+//    tree1.root.right.left = new TreeNode<Integer>(200);
+//    tree1.root.right.right = new TreeNode<Integer>(350);
+//    tree1.root.right.right.left = new TreeNode<Integer>(300);
+//    tree1.root.right.right.right = new TreeNode<Integer>(500);
+//
+//    BinaryTree<Integer> tree2 = new BinaryTree<>();
+//    tree2.root = new TreeNode<Integer>(42);
+//    tree2.root.left = new TreeNode<Integer>(100);
+//    tree2.root.right = new TreeNode<Integer>(600);
+//    tree2.root.left.left = new TreeNode<Integer>(15);
+//    tree2.root.left.right = new TreeNode<Integer>(160);
+//    tree2.root.left.right.left = new TreeNode<Integer>(125);
+//    tree2.root.left.right.right = new TreeNode<Integer>(175);
+//    tree2.root.right.left = new TreeNode<Integer>(200);
+//    tree2.root.right.right = new TreeNode<Integer>(350);
+//    tree2.root.right.right.left = new TreeNode<Integer>(4);
+//    tree2.root.right.right.right = new TreeNode<Integer>(500);
+//
+//    System.out.println(treeIntersection(tree1,tree2));
 
-    BinaryTree<Integer> tree2 = new BinaryTree<>();
-    tree2.root = new TreeNode<Integer>(42);
-    tree2.root.left = new TreeNode<Integer>(100);
-    tree2.root.right = new TreeNode<Integer>(600);
-    tree2.root.left.left = new TreeNode<Integer>(15);
-    tree2.root.left.right = new TreeNode<Integer>(160);
-    tree2.root.left.right.left = new TreeNode<Integer>(125);
-    tree2.root.left.right.right = new TreeNode<Integer>(175);
-    tree2.root.right.left = new TreeNode<Integer>(200);
-    tree2.root.right.right = new TreeNode<Integer>(350);
-    tree2.root.right.right.left = new TreeNode<Integer>(4);
-    tree2.root.right.right.right = new TreeNode<Integer>(500);
+    ///////////////////////////////////// challenge 33 ////////////////////////////////////
+    HashTable<String> table1 = new HashTable<>(5);
+    HashTable<String> table2 = new HashTable<>(5);
 
-    System.out.println(treeIntersection(tree1,tree2));
+    table1.add("found", "enamored");
+    table1.add("guide", "usher");
+    table1.add("outfit", "garb");
+
+    table2.add("found", "averse");
+    table2.add("guide", "follow");
+    table2.add("flow", "jam");
+
+    System.out.println(leftJoin(table1, table2));
+
   }
 }
