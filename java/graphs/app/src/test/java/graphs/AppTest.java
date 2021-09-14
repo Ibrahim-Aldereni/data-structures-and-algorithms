@@ -14,27 +14,51 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class AppTest {
   //////////////////////////////////////// lab 35 /////////////////////////////////////////
-    @Test void testGraph1() {
-      Graph graph = new Graph();
-      graph.addNode("Bob");
-      graph.addNode("Alice");
-      graph.addNode("Mark");
-      graph.addNode("Rob");
-      graph.addNode("Maria");
-      graph.addEdge("Bob", "Alice");
-      graph.addEdge("Bob", "Rob");
-      graph.addEdge("Alice", "Mark");
-      graph.addEdge("Rob", "Mark");
-      graph.addEdge("Alice", "Maria");
-      graph.addEdge("Rob", "Maria");
+  @Test
+  void testGraph1() {
+    Graph graph = new Graph();
+    graph.addNode("Bob");
+    graph.addNode("Alice");
+    graph.addNode("Mark");
+    graph.addNode("Rob");
+    graph.addNode("Maria");
+    graph.addEdge("Bob", "Alice");
+    graph.addEdge("Bob", "Rob");
+    graph.addEdge("Alice", "Mark");
+    graph.addEdge("Rob", "Mark");
+    graph.addEdge("Alice", "Maria");
+    graph.addEdge("Rob", "Maria");
 
-      // getNodes output must be
-      Set<String> set = new HashSet<String>(List.of("Bob", "Rob", "Alice", "Mark", "Maria"));
-      // getNeighbors of Bob must be
-      List<String> list = Arrays.asList("Alice","Rob");
+    // getNodes output must be
+    Set<String> set = new HashSet<String>(List.of("Bob", "Rob", "Alice", "Mark", "Maria"));
+    // getNeighbors of Bob must be
+    List<String> list = Arrays.asList("Alice", "Rob");
 
-      assertEquals(set,graph.getNodes());
-      assertEquals(5,graph.size());
-      assertEquals(list,graph.getNeighbors("Bob"));
-    }
+    assertEquals(set, graph.getNodes());
+    assertEquals(5, graph.size());
+    assertEquals(list, graph.getNeighbors("Bob"));
+  }
+
+  //////////////////////////////////////// lab 36 /////////////////////////////////////////
+  @Test
+  void testGraph2() {
+    Graph graph = new Graph();
+    graph.addNode("Bob");
+    graph.addNode("Alice");
+    graph.addNode("Mark");
+    graph.addNode("Rob");
+    graph.addNode("Maria");
+    graph.addEdge("Bob", "Alice");
+    graph.addEdge("Bob", "Rob");
+    graph.addEdge("Alice", "Mark");
+    graph.addEdge("Rob", "Mark");
+    graph.addEdge("Alice", "Maria");
+    graph.addEdge("Rob", "Maria");
+
+    // getNodes output must be
+    Set<String> set = new HashSet<String>(List.of("Bob", "Rob", "Alice", "Mark", "Maria"));
+
+    assertEquals(set, App.breadthFirst(graph,"Bob"));
+  }
+
 }

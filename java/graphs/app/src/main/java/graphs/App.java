@@ -3,9 +3,50 @@
  */
 package graphs;
 
+import java.util.HashSet;
+import java.util.LinkedList;
+import java.util.Queue;
+import java.util.Set;
+
 public class App {
+  //////////////////////////////////////// lab 36 /////////////////////////////////////////
+  public static Set<String> breadthFirst(Graph graph, String root){
+    Set<String> visited = new HashSet<>();
+    Queue<String> queue = new LinkedList<>();
+
+    queue.add(root);
+    visited.add(root);
+
+    while (!queue.isEmpty()) {
+      String node = queue.poll();
+      for (String v : graph.getNeighbors(node)) {
+        if (!visited.contains(v)) {
+          visited.add(v);
+          queue.add(v);
+        }
+      }
+    }
+    return visited;
+  }
     public static void main(String[] args) {
       //////////////////////////////////////// lab 35 /////////////////////////////////////////
+//      Graph graph = new Graph();
+//      graph.addNode("Bob");
+//      graph.addNode("Alice");
+//      graph.addNode("Mark");
+//      graph.addNode("Rob");
+//      graph.addNode("Maria");
+//      graph.addEdge("Bob", "Alice");
+//      graph.addEdge("Bob", "Rob");
+//      graph.addEdge("Alice", "Mark");
+//      graph.addEdge("Rob", "Mark");
+//      graph.addEdge("Alice", "Maria");
+//      graph.addEdge("Rob", "Maria");
+//
+//      System.out.println(graph.getNodes());
+//      System.out.println(graph.getNeighbors("Bob"));
+//      System.out.println(graph.size());
+      //////////////////////////////////////// lab 36 /////////////////////////////////////////
       Graph graph = new Graph();
       graph.addNode("Bob");
       graph.addNode("Alice");
@@ -19,8 +60,6 @@ public class App {
       graph.addEdge("Alice", "Maria");
       graph.addEdge("Rob", "Maria");
 
-      System.out.println(graph.getNodes());
-      System.out.println(graph.getNeighbors("Bob"));
-      System.out.println(graph.size());
+      System.out.println(breadthFirst(graph,"Bob"));
     }
 }
